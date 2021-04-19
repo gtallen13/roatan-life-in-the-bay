@@ -105,3 +105,11 @@ html {
   position: absolute;
   top: 105px;
 }
+
+.container h1 {
+  text-align: center;
+  font-family: "Cookie", cursive;
+  font-size: 4rem;
+  font-weight: 200;
+  margin: 20px 0;
+}
