@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 .bannerContainer {
   height: 100vh;
   width: 100%;
@@ -22,7 +22,7 @@
   filter: blur(0);
 }
 .bannerText h1 {
-  font-size: 10rem;
+  font-size: 10em;
   font-family: "Abril Fatface", cursive;
   justify-content: baseline;
   display: flex;
@@ -34,9 +34,9 @@
 .bannerText i {
   text-align: center;
   width: 100%;
-  font-size: 5rem;
+  font-size: 0.5em;
   font-weight: 100;
-  font-family: "Cookie", cursive;
+  font-family: "Dancing Script", cursive;
   z-index: 1000;
   margin: 0;
   position: absolute;
