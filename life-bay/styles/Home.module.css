@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+.bannerContainer {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bannerText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.bannerImage {
+  filter: blur(3px);
+  transition: all 1s;
+}
+.bannerImage:hover {
+  filter: blur(0);
+}
+.bannerText h1 {
+  font-size: 10rem;
+  font-family: "Abril Fatface", cursive;
+  justify-content: baseline;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin: 0;
+}
+
+.bannerText i {
+  text-align: center;
+  width: 100%;
+  font-size: 5rem;
+  font-weight: 100;
+  font-family: "Cookie", cursive;
+  z-index: 1000;
+  margin: 0;
+  position: absolute;
+  top: 105px;
+}
