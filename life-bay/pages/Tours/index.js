@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import styles from '../styles/Tours.module.css';
-import stylesConstants from '../styles/Constants.module.css';
-import GalleryView from '../components/Gallery/GalleryView';
+import styles from '../../styles/Tours.module.css';
+import stylesConstants from '../../styles/Constants.module.css';
+import GalleryView from '../../components/Gallery/GalleryView';
 const Tours = () => {
     return (
         <div>
@@ -10,7 +10,7 @@ const Tours = () => {
                 <meta name="keywords" content="tours,roatan,tours,bay islands"></meta>
             </Head>
             <div className={styles.galleryWrapper}>
-                <GalleryView title="Tour the Island"/>
+                <GalleryView title="Tour the Island" pageName="/Tours/tourIsland"/>
                 <GalleryView title="Water Activities"/>
             </div>
         </div>
