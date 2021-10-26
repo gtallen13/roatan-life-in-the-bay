@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap");
+
+.galleryWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #03033a;
+  height: 100vh;
+}
+.galleryContainer {
+  margin: 10px;
+  background-color: whitesmoke;
+  padding: 10px;
+  position: relative;
+}
+
+.galleryImage {
+  padding: 3px !important;
+}
+.galleryTitle {
+  font-family: "Zen Old Mincho", serif;
+  position: absolute;
+  z-index: 100;
+  background-color: #f5f5f5;
+  padding: 50px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 30%;
+  text-align: center;
+  width: 30%;
+  transition: all 0.5s;
+}
+.galleryTitle:hover {
+  color: #f5f5f5;
+  background-color: #03033a;
+}
