@@ -5,7 +5,7 @@ const Navbar = () => {
     return (
         <nav>
             <Link href="/">
-                <a><Image src="/logo.svg" alt="logo" width={100} height={80}/></a>
+                <a><Image src="/logo.svg" alt="logo" width={70} height={70}/></a>
             </Link>
             <Link href="/Tours/"><a>Tours</a></Link>
             <Link href="/book"><a>Book Now</a></Link>
