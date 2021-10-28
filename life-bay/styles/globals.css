@@ -6,6 +6,9 @@ html {
   padding: 0;
   margin: 0;
 }
+.page-background {
+  background-color: #03033a;
+}
 nav {
   z-index: 100;
   top: 0;
@@ -14,13 +17,13 @@ nav {
   opacity: 0.9;
   background-color: rgb(31, 30, 30);
   color: var(--white);
-  height: 15vh;
+  height: 10vh;
   width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-a {
+nav a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,7 +83,7 @@ footer span {
 
 .slide-container {
   padding: 15px 15px;
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -88,7 +91,15 @@ footer span {
 .slide-info {
   width: 50%;
   text-align: justify;
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
   font-family: "Zen Old Mincho", serif;
+  z-index: 100;
 }
 .slide-info h3 {
   font-size: 40px;
@@ -100,4 +111,34 @@ footer span {
 }
 .slide-image {
   border-radius: 50%;
+}
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+}
+.tour-title {
+  margin: 0;
+  padding-top: 10%;
+  font-size: 90px;
+  color: #f5f5f5;
+  text-shadow: 1px 1px 10px black;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+}
+.banner-container {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.text-section {
+  width: 60%;
+  position: relative;
+  padding: 10px;
+  background-color: #f5f5f5;
+  margin: 50px auto;
+  margin-bottom: 0px;
+  text-align: justify;
+  font-family: "Zen Old Mincho", serif;
+  font-size: 20px;
 }
