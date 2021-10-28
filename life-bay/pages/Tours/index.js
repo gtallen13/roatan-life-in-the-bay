@@ -10,7 +10,7 @@ const Tours = () => {
                 <meta name="keywords" content="tours,roatan,tours,bay islands"></meta>
             </Head>
             <div className={styles.galleryWrapper}>
-                <GalleryView title="Tour the Island" pageName="/Tours/tourIsland"/>
+                <GalleryView title="Tour the Island" pageName="/Tours/Island/"/>
                 <GalleryView title="Water Activities"/>
             </div>
         </div>
