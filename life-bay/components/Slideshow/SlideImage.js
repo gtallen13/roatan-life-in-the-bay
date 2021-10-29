@@ -3,8 +3,8 @@ const SlideImage = ({image, text}) => {
     return (
         <div className="slide-container">
             <Image layout='fill' src={`${image}`}/>
-            <div className="slide-info">
-                <h1>{text}</h1>
+            <div className="slide-info bottom-center">
+                <h3>{text}</h3>
             </div>
         </div>
     );

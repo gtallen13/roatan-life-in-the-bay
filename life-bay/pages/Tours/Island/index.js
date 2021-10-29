@@ -49,7 +49,7 @@ const tourIsland = () => {
                             )
                         )}
                     </Swiper>
-                    <h4>East Side Tours</h4>
+                    <Link href=""><h4>East Side Tours</h4></Link>
                     <p>Laboris Lorem mollit ea qui dolore aliqua officia id tempor. Eiusmod Lorem in adipisicing esse... <Link href=""><a>Read More</a></Link></p>
                 </div>
                 <div className={styles.slideCards}>
