@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import styles from '../../styles/Tours.module.css';
-import stylesConstants from '../../styles/Constants.module.css';
 import GalleryView from '../../components/Gallery/GalleryView';
 const Tours = () => {
     return (

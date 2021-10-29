@@ -5,12 +5,12 @@ const GalleryView = ({title, pageName}) => {
     return (
         <div className={styles.galleryContainer}>
             <Link href={`${pageName}`}><h2 className={styles.galleryTitle}>{title}</h2></Link>
-            <div>
+            <div className={styles.galleryRow}>
                 <Image className={styles.galleryImage} src="/image1.jpg" width={200} height={200}/>
                 <Image className={styles.galleryImage} src="/image2.jpg" width={200} height={200}/>
                 <Image className={styles.galleryImage} src="/image3.jpg" width={200} height={200}/>
             </div>
-            <div>
+            <div className={styles.galleryRow}>
                 <Image className={styles.galleryImage} src="/image3.jpg" width={200} height={200}/>
                 <Image className={styles.galleryImage} src="/image2.jpg" width={200} height={200}/>
                 <Image className={styles.galleryImage} src="/image1.jpg" width={200} height={200}/>
