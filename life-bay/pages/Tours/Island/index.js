@@ -8,6 +8,15 @@ import SwiperCore, {Autoplay} from 'swiper';
 const tourIsland = () => {
     const westImages = ['/west1.jpg','/west2.jpg','/west3.jpg']
     SwiperCore.use([Autoplay]);
+
+    //db functions
+    async function fetchToursRequest(){
+        const response = await fetch("/api/tours");
+        const data = await response.json();
+        console.log(data);
+        return[]
+    }
+    fetchToursRequest();
     return (
         <div className="page-background">
             <Head>
