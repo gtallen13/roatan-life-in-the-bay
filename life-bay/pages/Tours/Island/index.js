@@ -11,12 +11,11 @@ const tourIsland = () => {
 
     //db functions
     async function fetchToursRequest(){
-        const response = await fetch("/api/tours");
+        const response = await fetch("/../api/tours");
         const data = await response.json();
         console.log(data);
         return[]
     }
-    fetchToursRequest();
     return (
         <div className="page-background">
             <Head>
