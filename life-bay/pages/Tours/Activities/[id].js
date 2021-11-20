@@ -1,6 +1,6 @@
 import { ObjectId } from "bson";
 import { connectToDatabase } from "../../../utils/mongodb";
-import breakLine from "../../../utils/textMods/breakLine"
+import breakLine from "../../../utils/textMods"
 import Link from 'next/link';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';

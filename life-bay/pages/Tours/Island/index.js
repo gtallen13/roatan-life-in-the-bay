@@ -2,6 +2,7 @@ import Head from 'next/head';
 import  Image from 'next/image';
 import Link from 'next/link';
 import styles from '../../../styles/Tours.module.css'
+import {descriptionLimiter} from "../../../utils/textMods"
 import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import SwiperCore, {Autoplay} from 'swiper';
@@ -9,11 +10,6 @@ import { connectToDatabase } from '../../../utils/mongodb';
 const tourIsland = ({tours}) => {
     const westImages = ['/west1.jpg','/west2.jpg','/west3.jpg']
     SwiperCore.use([Autoplay]);
-    //helps shorten description from DB
-    const descriptionLimiter = (string='',limit=0)=>{
-        return string.substring(0,limit);
-    }
-
     
     return (
         <div className="page-background">
