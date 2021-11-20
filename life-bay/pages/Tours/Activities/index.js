@@ -6,7 +6,7 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import SwiperCore, {Autoplay} from 'swiper';
 import { connectToDatabase } from '../../../utils/mongodb';
-const tourIsland = ({tours}) => {
+const waterActivities = ({activities}) => {
     const westImages = ['/west1.jpg','/west2.jpg','/west3.jpg']
     SwiperCore.use([Autoplay]);
     //helps shorten description from DB
@@ -21,9 +21,9 @@ const tourIsland = ({tours}) => {
                 <title>Tour the Island | Roatan Life in the Bay</title>
                 <meta name="keywords" content="tour,island,roatan,tours,bay islands"></meta>
             </Head> 
-            <h1 className="tour-title">Tour the Island</h1>
+            <h1 className="tour-title">Water Activities</h1>
             <div className={styles.slideWrapper}>
-                {tours.map((tour)=>(
+                {activities.map((activity)=>(
                     <div className={styles.slideCards}>
                         <div>
                             <Swiper spaceBetween={50}
@@ -40,9 +40,9 @@ const tourIsland = ({tours}) => {
                                 )}
                             </Swiper>
                         </div>
-                        <Link href={`/Tours/Island/${tour.id}`}><h4>{tour.name}</h4></Link>
-                        <p>{descriptionLimiter(tour.description,150)}
-                            <Link href={`/Tours/Island/${tour.id}`}>
+                        <Link href={`/Tours/Activities/${activity.id}`}><h4>{activity.name}</h4></Link>
+                        <p>{descriptionLimiter(activity.description,150)}
+                            <Link href={`/Tours/Activities/${activity.id}`}>
                                 <a>...Read More</a>
                             </Link>
                         </p>
@@ -57,23 +57,23 @@ export async function getStaticProps(context){
     const {db} = await connectToDatabase();
     
     const data = await db
-    .collection("tours")
+    .collection("activities")
     .find()
     .toArray();
     
-    const tours = data.map(tour=>{        
-        const id = JSON.parse(JSON.stringify(tour._id));
+    const activities = data.map(activity=>{        
+        const id = JSON.parse(JSON.stringify(activity._id));
         return{
             id: id,
-            name: tour.name,
-            description: tour.description,
-            price: tour.price,
-            bring_items: tour.bring_items
+            name: activity.name,
+            description: activity.description,
+            prices: activity.prices,
+            bring_items: activity.bring_items
         }
     })
     return{ 
-        props:{tours}
+        props:{activities}
     }
 }
 
-export default tourIsland;
+export default waterActivities;

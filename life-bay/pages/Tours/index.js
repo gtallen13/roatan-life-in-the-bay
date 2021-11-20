@@ -10,7 +10,7 @@ const Tours = () => {
             </Head>
             <div className={styles.galleryWrapper}>
                 <GalleryView title="Tour the Island" pageName="/Tours/Island/"/>
-                <GalleryView title="Water Activities"/>
+                <GalleryView title="Water Activities" pageName="/Tours/Activities/"/>
             </div>
         </div>
     );
