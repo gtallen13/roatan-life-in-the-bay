@@ -21,7 +21,7 @@ const waterActivities = ({activities}) => {
                 <title>Tour the Island | Roatan Life in the Bay</title>
                 <meta name="keywords" content="tour,island,roatan,tours,bay islands"></meta>
             </Head> 
-            <h1 className="tour-title">Water Activities</h1>
+            <h1 className="titles">Water Activities</h1>
             <div className={styles.slideWrapper}>
                 {activities.map((activity)=>(
                     <div className={styles.slideCards}>

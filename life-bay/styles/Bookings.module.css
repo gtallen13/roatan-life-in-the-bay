@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+
+.bookingFrm {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10%;
+}
+.frmRow {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+.frmItems {
+  width: 70%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin: 10px;
+}
+.frmItems input {
+  width: 80% !important  ;
+  padding: 10px;
+  margin: 10px;
+  transition: all 1s;
+  border: none;
+  border-bottom: 2px solid black;
+  opacity: 0.7;
+  border-radius: 5px 5px 0 0;
+  background-color: #d8c6ac;
+  font-size: 15px;
+}
+.frmItems input:focus {
+  border-bottom: 2px solid #115c8a;
+  outline: none;
+  opacity: 1;
+}
+.frmItems select {
+  width: 90%;
+  padding: 10px;
+  margin: 10px;
+  transition: all 1s;
+  border: none;
+  border-bottom: 2px solid black;
+  opacity: 0.7;
+  border-radius: 5px 5px 0 0;
+  font-size: 15px;
+  background-color: #d8c6ac;
+}
+.frmItems select:focus {
+  border-bottom: 2px solid #115c8a;
+  outline: none;
+  opacity: 1;
+}
+.frmItems label {
+  font-size: 18px;
+}
+.frmItems input {
+  width: fit-content;
+}
+.btnConfirm {
+  padding: 20px;
+  font-size: 15px;
+  width: 50%;
+  margin: 0 auto;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  background-color: #115c8a;
+  color: whitesmoke;
+  transition: all 0.5s;
+  opacity: 0.7;
+  font-size: 30px;
+  font-family: "Dancing Script", cursive;
+}
+.btnConfirm:hover {
+  opacity: 1;
+}
+a.btnBuild {
+  font-family: "Dancing Script", cursive;
+  font-size: 20px;
+  padding: 0;
+  background-color: none !important;
+}
+.checkboxContainer input {
+  width: fit-content !important;
+}

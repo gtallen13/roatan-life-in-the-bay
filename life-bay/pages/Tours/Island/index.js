@@ -17,7 +17,7 @@ const tourIsland = ({tours}) => {
                 <title>Tour the Island | Roatan Life in the Bay</title>
                 <meta name="keywords" content="tour,island,roatan,tours,bay islands"></meta>
             </Head> 
-            <h1 className="tour-title">Tour the Island</h1>
+            <h1 className="titles">Tour the Island</h1>
             <div className={styles.slideWrapper}>
                 {tours.map((tour)=>(
                     <div className={styles.slideCards}>
