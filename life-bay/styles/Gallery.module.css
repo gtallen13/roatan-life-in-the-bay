@@ -1,0 +1,21 @@
+.galleryContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+.galleryItem {
+  overflow: hidden;
+  width: 90%;
+  height: 45vh;
+  margin: 10px;
+  border-radius: 20px;
+  position: relative;
+}
+.galleryImg {
+  transition: all 0.5s;
+  opacity: 0.9;
+}
+
+.galleryImg:hover {
+  opacity: 1;
+  transform: scale(1.15);
+}
