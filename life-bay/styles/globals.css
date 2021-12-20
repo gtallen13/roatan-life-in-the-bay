@@ -166,7 +166,7 @@ footer span {
   width: 100%;
   height: 5vh;
 }
-.text-section a {
+.text-section.routesID a {
   background: #115c8a;
   text-align: center;
   width: 15%;
@@ -177,7 +177,7 @@ footer span {
   border-radius: 10px;
   transition: all 1s;
 }
-.text-section a:hover {
+.text-section.routesID a:hover {
   background-color: rgb(19, 18, 18);
 }
 
@@ -192,4 +192,46 @@ span.price {
 }
 div#bookings {
   width: 70%;
+}
+
+.text-section.covid {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-image: url(../public/parallax-bg.jpg);
+  background-position: center;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: white;
+}
+span.swiper-pagination-bullet {
+  background-color: whitesmoke;
+}
+
+.swiper-slide .text {
+  font-size: 25px;
+  max-width: 60%;
+}
+.swiper-slide .text a {
+  color: black;
+  transition: color 0.5s;
+}
+.swiper-slide .text a:hover {
+  color: #115c8a;
 }

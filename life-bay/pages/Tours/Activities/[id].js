@@ -66,7 +66,7 @@ const Details = ({activity}) => {
                 </Swiper>
             </div>
             <div className="center">
-                <section className="text-section">
+                <section className="text-section routesID">
                         <p>{breakLine(activity.description)}</p>
                         <p>Prices:</p>
                         <ul>

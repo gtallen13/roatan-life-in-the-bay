@@ -64,7 +64,7 @@ const Details = ({tour}) => {
                 </Swiper>
             </div>
             <div className="center">
-                <section className="text-section">
+                <section className="text-section routesID">
                         <span className="price">Price: ${tour.price}/person</span>
                         <p>{tour.description}</p>
                         <ul>
