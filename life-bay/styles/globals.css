@@ -205,10 +205,12 @@ div#bookings {
   padding: 0;
   background-image: url(../public/parallax-bg.jpg);
   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .swiper {
-  width: 100%;
+  width: 90%;
   height: 100%;
 }
 
@@ -226,8 +228,16 @@ span.swiper-pagination-bullet {
 }
 
 .swiper-slide .text {
+  background-color: whitesmoke;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
   font-size: 25px;
   max-width: 60%;
+  opacity: 0.8;
+}
+.swiper-slide .titles {
+  color: whitesmoke;
 }
 .swiper-slide .text a {
   color: black;
