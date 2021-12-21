@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 .bannerContainer {
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .bannerText {
   display: flex;

@@ -18,40 +18,134 @@ html {
   background-color: whitesmoke;
 }
 nav {
-  z-index: 100;
-  top: 0;
-  right: 0;
-  position: fixed;
-  opacity: 0.9;
   background-color: rgb(31, 30, 30);
-  color: var(--white);
-  height: 10vh;
   width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
 }
-nav a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 10%;
-  height: 100%;
-  font-size: 1.5em;
-  cursor: pointer;
-  background: linear-gradient(to right, white, white 50%, gray 50%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 200% 100%;
-  background-position: 100%;
-  transition: all 0.5s;
-}
-a:hover {
-  background-position: 0 100%;
-  opacity: 1;
+nav::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
+nav .logo h4 {
+  float: left;
+  font-size: 40px;
+  color: whitesmoke;
+  margin: 25px 20px;
+  font-family: "Dancing Script", cursive;
+}
+nav ul {
+  float: right;
+  list-style: none;
+  margin-right: 40px;
+  position: relative;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0 5px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  line-height: 70px;
+  font-size: 25px;
+  padding: 8px 15px;
+  opacity: 0.8;
+}
+nav ul li a:hover {
+  opacity: 1;
+}
+nav ul ul {
+  z-index: 1000;
+  position: absolute;
+  top: 90px;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: top 0.3s;
+}
+nav ul li:hover > ul {
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+nav ul ul li {
+  position: relative;
+  background-color: rgb(31, 30, 30);
+  margin: 0px;
+  width: 120px;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid whitesmoke;
+}
+nav ul ul li a {
+  font-size: 18px;
+  line-height: 50px;
+}
+/* Menu Responsive */
+.show,
+.icon,
+input {
+  display: none;
+}
+@media all and (max-width: 968px) {
+  nav ul {
+    margin-right: 0px;
+    float: left;
+    width: 100%;
+  }
+  nav .logo {
+    padding-left: 30px;
+    width: 100%;
+  }
+  nav ul li,
+  nav ul ul li {
+    display: block;
+    width: 100%;
+  }
+  nav ul ul {
+    top: 70px;
+    position: static;
+    border-top: none;
+    float: none;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  nav ul ul a {
+    padding-left: 40px;
+  }
+  .show {
+    display: block;
+    color: white;
+    font-size: 25px;
+    padding: 0 20px;
+    line-height: 70px;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  .show:hover {
+    opacity: 1;
+  }
+  .icon {
+    display: block;
+    color: whitesmoke;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    line-height: 70px;
+    cursor: pointer;
+  }
+  .show + a,
+  ul {
+    display: none;
+  }
+  [id^="btn"]:checked + ul {
+    display: block;
+  }
+}
+/* ----------------- */
 footer {
   background-color: rgb(31, 30, 30);
   display: flex;

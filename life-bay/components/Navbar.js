@@ -1,15 +1,33 @@
 import Link from 'next/link';
 import Image from 'next/image';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 const Navbar = () => {
     return (
         <nav>
-            <Link href="/">
-                <a><Image src="/logo.svg" alt="logo" width={70} height={70}/></a>
-            </Link>
-            <Link href="/Tours/"><a>Tours</a></Link>
-            <Link href="/Bookings"><a>Book Now</a></Link>
-            <Link href="more" ><a>More...</a></Link>
+            <div className='logo'>
+                <h4>Life in the Bay</h4>
+            </div>
+            <label for='btn-Menu' className='icon'>
+                <FontAwesomeIcon icon={faBars} size='2x'/>
+            </label>
+            <input id='btn-Menu' type="checkbox"/>
+            <ul>
+                <li><Link href="/"><a>Home</a></Link></li>
+                <li><Link href="/Tours/"><a>Tours</a></Link></li>
+                <li><Link href="/Bookings"><a>Book Now</a></Link></li>
+                <li>
+                    <label for="btn-More" className='show'>More</label>
+                    <Link href="#" ><a>More</a></Link>
+                    <input type="checkbox" id="btn-More"/>
+                    <ul>
+                        <li><Link href="/More/Covid"><a>COVID-19</a></Link></li>
+                        <li><Link href="/More/About"><a>About US</a></Link></li>
+                        <li><Link href="/More/Gallery"><a>Gallery</a></Link></li>
+                        <li><Link href="/More/Contact"><a>Contact</a></Link></li>
+                    </ul>
+                </li>  
+            </ul>
         </nav>
     );
 }
