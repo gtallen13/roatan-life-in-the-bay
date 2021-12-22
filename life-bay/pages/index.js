@@ -24,17 +24,12 @@ export default function Home() {
             </h1>
         </div>
       </div>
-
-      {/* Home Section */}
-      <div className="home-section">
-        <h2 className={stylesConstants.textSecondary}> What our guests have to say about us...</h2>
-      </div>
       {/* Slideshow */}
       <Swiper
       spaceBetween={50}
       slidesPerView={1}
       autoplay={{
-        delay:2000,
+        delay:5000,
         disableOnInteraction:false
         }}>
         <SwiperSlide >

@@ -25,21 +25,21 @@ const tourIsland = ({tours}) => {
                             <Swiper spaceBetween={50}
                                 slidesPerView={1}
                                 autoplay={{
-                                delay:2000,
+                                delay:5000,
                                 disableOnInteraction:false
                             }}>
                                 {westImages.map((x)=>(
                                         <SwiperSlide>
-                                            <Image key={x} width={300} height={300} src={x}/>
+                                            <Image key={x} width={400} height={300} src={x} className={styles.slideImg}/>
                                         </SwiperSlide>
                                     )
                                 )}
                             </Swiper>
                         </div>
                         <Link href={`/Tours/Island/${tour.id}`}><h4>{tour.name}</h4></Link>
-                        <p>{descriptionLimiter(tour.description,150)}
+                        <p>{descriptionLimiter(tour.description,150)}...
                             <Link href={`/Tours/Island/${tour.id}`}>
-                                <a>...Read More</a>
+                                <a>Read More</a>
                             </Link>
                         </p>
                     </div>

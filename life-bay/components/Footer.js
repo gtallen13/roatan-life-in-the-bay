@@ -6,17 +6,17 @@ import {faInstagram, faFacebook} from '@fortawesome/free-brands-svg-icons'
 const Footer = () => {
     return (
         <footer >
-            <Image src="/logo.svg" alt="logo" width={80} height={60}/>
-            <span>Copyright &copy; 2021 George Allen</span>
+            <Image src="/logo.svg" alt="logo" width={100} height={90}/>
             <div className="social-links">
-                <Link  href="https://instagram.com/roatanlifeinthebay?igshid=vl0jxr46jiao">
+                <a href="https://instagram.com/roatanlifeinthebay?igshid=vl0jxr46jiao" target="_blank">
                     <i><FontAwesomeIcon icon={faInstagram}/></i>
-                </Link>
+                </a>
                 <i>|</i>
-                <Link href="https://www.facebook.com/roatanlifeinthebay">
+                <a href="https://www.facebook.com/roatanlifeinthebay" target="_blank">
                     <i><FontAwesomeIcon icon={faFacebook}/></i>
-                </Link>
+                </a>
             </div>
+            <span>Copyright &copy; 2021 George Allen</span>
         </footer>
     );
 }
