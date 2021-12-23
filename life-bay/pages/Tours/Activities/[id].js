@@ -3,9 +3,15 @@ import { connectToDatabase } from "../../../utils/mongodb";
 import {breakLine} from "../../../utils/textMods"
 import Link from 'next/link';
 import {Swiper, SwiperSlide} from 'swiper/react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMapSigns } from "@fortawesome/free-solid-svg-icons";
 import 'swiper/css';
-import SwiperCore, {Autoplay,EffectFade,Pagination} from 'swiper';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation'
+import SwiperCore, {Navigation,Pagination} from 'swiper';
+SwiperCore.use([Pagination,Navigation]);
 import SlideImage from '../../../components/Slideshow/SlideImage'
+
 export async function getStaticPaths(){
     return{
         paths:[],
@@ -26,6 +32,7 @@ export async function getStaticProps({params}){
             description:1,
             prices:1,
             bring_items:1,
+            route:1,
         }
     })
     return{
@@ -39,34 +46,43 @@ export async function getStaticProps({params}){
 
 
 const Details = ({activity}) => {
-    SwiperCore.use([Autoplay,Pagination,EffectFade]);
     const images = ['/banner1.jpg','/banner2.jpg','/banner3.jpg'];
 
-
+    console.log(activity.route.length)
     return (
         <div className="page-background">
             <div>
+                <h1 className="title-parallax">{activity.name}</h1>
+
                 <Swiper 
                 className="banner-container"
                 slidesPerView={1}
                 spaceBetween={50}
-                autoplay={{
-                    disableOnInteraction:false,
-                    delay:1000
-                    }}
-                pagination={{dynamicBullets:true,}}
-                effect="fade"
+                pagination={{clickable:true,}}
                 navigation={true}
                 loop={true}>
                     {images.map((x)=>(
                         <SwiperSlide key={x}>
-                            <SlideImage image={x} text={activity.name}/>
+                            <SlideImage image={x}/>
                         </SwiperSlide>
                     ))}
                 </Swiper>
             </div>
             <div className="center">
-                <section className="text-section routesID">
+                <section className="text-section activity">
+                    <div className="route-container">
+                        <p className="route-text">Checkout the route !</p>
+                        {(activity.route.length)===2  ?
+                            // <p>{activity.route.length}</p>
+                            (<a href={`https://www.google.com/maps/dir/?api=1&origin=${activity.route[0]}&destination=${activity.route[1]}`} target="_blank">
+                                <FontAwesomeIcon icon={faMapSigns} size="6x" className="map-icon"/>
+                            </a>):
+                            (<a href={`https://www.google.com/maps/search/?api=1&query=${activity.route[0]}`} target="_blank">
+                                <FontAwesomeIcon icon={faMapSigns} size="6x" className="map-icon"/>
+                            </a>)
+                        }
+                    </div>
+                    <div>
                         <p>{breakLine(activity.description)}</p>
                         <p>Prices:</p>
                         <ul>
@@ -81,8 +97,9 @@ const Details = ({activity}) => {
                             ))}
                         </ul>
                         <div className="book-now-wrapper center">
-                            <Link href=""><a>Book Now</a></Link>
+                            <Link href=""><a className="btnBook">Book Now</a></Link>
                         </div>
+                    </div>
                 </section>
 
             </div>

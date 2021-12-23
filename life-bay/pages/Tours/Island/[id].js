@@ -24,7 +24,7 @@ const Details = ({tour}) => {
             </Head> 
             <div>
                 <h1 className="title-parallax">{tour.name}</h1>
-            <Swiper
+                <Swiper
                 slidesPerView={1}
                 spaceBetween={30}
                 loop={true}
@@ -40,7 +40,7 @@ const Details = ({tour}) => {
                 </Swiper>
             </div>
             <div className="center">
-                <section className="text-section routesID">
+                <section className="text-section tours">
                     <div className="route-container">
                         <p>Checkout the route !</p>
                         <a href={`https://www.google.com/maps/dir/?api=1&origin=${originPoint}&destination=${destinationPoint}&travelmode=driving`} target="_blank">
@@ -56,7 +56,7 @@ const Details = ({tour}) => {
                         </ul>
                         <div className="book-now-wrapper">
                             <span className="price">Price: ${tour.price}/person</span>
-                            <Link href=""><a>Book Now</a></Link>
+                            <Link href=""><a className="btnBook">Book Now</a></Link>
                         </div>
                     </div>
                 </section>

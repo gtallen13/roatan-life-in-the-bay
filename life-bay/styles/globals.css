@@ -268,7 +268,7 @@ footer span {
   align-items: baseline;
   flex-direction: column;
 }
-.text-section.routesID a {
+a.btnBook {
   background: #115c8a;
   text-align: center;
   width: 15%;
@@ -279,10 +279,11 @@ footer span {
   border-radius: 10px;
   transition: all 1s;
 }
-.text-section.routesID a:hover {
+a.btnBook:hover {
   background-color: rgb(19, 18, 18);
 }
-.text-section.routesID {
+.text-section.tours,
+.text-section.activity {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
@@ -304,7 +305,7 @@ span.price {
   position: relative;
   text-align: center;
 }
-.route-container p {
+.route-container .route-text {
   margin-bottom: 10px;
   font-size: 20px;
   font-family: "Zen Old Mincho", serif;
