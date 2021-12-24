@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+.bannerContainer {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.bannerText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.bannerImage {
+  filter: blur(3px);
+  transition: all 1s;
+}
+.bannerImage:hover {
+  filter: blur(0);
+}
+.bannerText h1 {
+  font-size: 10em;
+  font-family: "Abril Fatface", cursive;
+  justify-content: baseline;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin: 0;
+}
+
+.bannerText i {
+  text-align: center;
+  width: 100%;
+  font-size: 0.5em;
+  font-weight: 100;
+  font-family: "Dancing Script", cursive;
+  z-index: 1000;
+  margin: 0;
+  position: absolute;
+  top: 105px;
+}

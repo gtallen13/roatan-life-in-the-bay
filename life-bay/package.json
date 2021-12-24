@@ -1,0 +1,30 @@
+{
+  "name": "life-bay",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.16",
+    "isomorphic-unfetch": "^3.1.0",
+    "mongodb": "^4.1.4",
+    "mongoose": "^6.0.12",
+    "next": "11.1.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.0.4",
+    "swiper": "^7.0.9"
+  },
+  "devDependencies": {
+    "eslint": "8.1.0",
+    "eslint-config-next": "11.1.2"
+  }
+}

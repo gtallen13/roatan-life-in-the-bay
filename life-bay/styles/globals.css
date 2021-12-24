@@ -1,0 +1,384 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap");
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.page-background {
+  /* background-color: #115c8a; */
+  background-color: whitesmoke;
+}
+/* Menu */
+nav {
+  background-color: #000;
+  width: 100%;
+}
+nav::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+nav .logo h4 {
+  float: left;
+  font-size: 40px;
+  color: whitesmoke;
+  margin: 25px 20px;
+  font-family: "Dancing Script", cursive;
+}
+nav ul {
+  float: right;
+  list-style: none;
+  margin-right: 40px;
+  position: relative;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0 5px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  line-height: 70px;
+  font-size: 25px;
+  padding: 8px 15px;
+  opacity: 0.8;
+}
+nav ul li a:hover {
+  opacity: 1;
+}
+nav ul ul {
+  z-index: 1000;
+  position: absolute;
+  top: 90px;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: top 0.3s;
+}
+nav ul li:hover > ul {
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+nav ul ul li {
+  position: relative;
+  background-color: rgb(31, 30, 30);
+  margin: 0px;
+  width: 120px;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid whitesmoke;
+}
+nav ul ul li a {
+  font-size: 18px;
+  line-height: 50px;
+}
+/* Menu Responsive */
+
+.show,
+.icon,
+nav input {
+  display: none;
+}
+@media all and (max-width: 968px) {
+  nav ul {
+    margin-right: 0px;
+    float: left;
+    width: 100%;
+  }
+  nav .logo {
+    padding-left: 30px;
+    width: 100%;
+  }
+  nav ul li,
+  nav ul ul li {
+    display: block;
+    width: 100%;
+  }
+  nav ul ul {
+    top: 70px;
+    position: static;
+    border-top: none;
+    float: none;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  nav ul ul a {
+    padding-left: 40px;
+  }
+  .show {
+    display: block;
+    color: white;
+    font-size: 25px;
+    padding: 0 20px;
+    line-height: 70px;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  .show:hover {
+    opacity: 1;
+  }
+  .icon {
+    display: block;
+    color: whitesmoke;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    line-height: 70px;
+    cursor: pointer;
+  }
+  .show + a,
+  ul {
+    display: none;
+  }
+  [id^="btn"]:checked + ul {
+    display: block;
+  }
+}
+/* ----------------- */
+/* Footer */
+footer {
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+footer span {
+  margin: 10px 0;
+  opacity: 0.6;
+}
+.social-links i {
+  font-size: 35px;
+  transition-property: color;
+  transition-duration: 0.5s;
+  margin: 10px 10px;
+  color: #f5f5f5;
+}
+
+.social-links a i:hover {
+  color: #46b5d1;
+}
+
+/* End footer */
+/* Home Section */
+.title-parallax {
+  position: absolute;
+  z-index: 100;
+  bottom: -15%;
+  color: whitesmoke;
+  width: 100%;
+  text-align: center;
+  font-family: "Zen Old Mincho", serif;
+  font-size: 70px;
+}
+.slide-container {
+  padding: 15px 15px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.slide-info {
+  width: 50%;
+  text-align: justify;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  font-family: "Zen Old Mincho", serif;
+  z-index: 100;
+}
+.bottom-center {
+  align-items: center;
+  justify-content: flex-end;
+}
+.slide-info.bottom-center h3 {
+  color: #f5f5f5;
+  font-size: 80px;
+  margin-bottom: 40px;
+}
+.slide-info h3 {
+  font-size: 40px;
+  margin: 0;
+}
+
+.slide-info span {
+  font-size: 20px;
+  padding-left: 30px;
+}
+.slide-image {
+  border-radius: 50%;
+}
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+}
+.titles {
+  margin: 0;
+  padding-top: 10%;
+  font-size: 90px;
+  color: black;
+  text-shadow: 1px 1px 10px #115c8a;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+}
+.banner-container {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.text-section {
+  position: relative;
+  text-align: justify;
+  font-family: "Zen Old Mincho", serif;
+  font-size: 20px;
+  width: 80%;
+  height: max-content;
+  /* background-color: #f5f5f5; */
+  margin: 20px auto;
+  padding: 10px;
+  /* border-radius: 10px; */
+  /* box-shadow: 1px 2px 5px black; */
+}
+/* End Home Section */
+
+.book-now-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-direction: column;
+}
+a.btnBook {
+  background: #115c8a;
+  text-align: center;
+  width: 15%;
+  bottom: 5px;
+  padding: 15px 0;
+  text-decoration: none;
+  color: #f5f5f5;
+  border-radius: 10px;
+  transition: all 1s;
+}
+a.btnBook:hover {
+  background-color: rgb(19, 18, 18);
+}
+.text-section.tours,
+.text-section.activity {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: flex-start;
+}
+span.price {
+  display: flex;
+  justify-content: right;
+  color: #115c8a;
+  font-weight: bolder;
+  font-style: italic;
+  font-size: 18px;
+  margin: 10px;
+  /* text-shadow: 0.5px 0.5px 1px black; */
+}
+.route-container {
+  text-align: right;
+  margin: 20px;
+  position: relative;
+  text-align: center;
+}
+.route-container .route-text {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-family: "Zen Old Mincho", serif;
+}
+.map-icon {
+  color: #03033a;
+  float: right;
+  transition: color 0.5s;
+}
+.map-icon:hover {
+  color: #d8c6ac;
+}
+div#bookings {
+  width: 70%;
+}
+
+.text-section.covid {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-image: url(../public/parallax-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.text-section.covid .swiper {
+  width: 90%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: white;
+}
+span.swiper-pagination-bullet {
+  background-color: whitesmoke;
+}
+
+.swiper-slide .text {
+  background-color: whitesmoke;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  font-size: 25px;
+  max-width: 60%;
+  opacity: 0.8;
+}
+.swiper-slide .titles {
+  color: whitesmoke;
+}
+.swiper-slide .text a {
+  color: black;
+  transition: color 0.5s;
+}
+.swiper-slide .text a:hover {
+  color: #115c8a;
+}
+.signature {
+  font-family: "Imperial Script", cursive;
+  font-size: 40px;
+  text-shadow: 0.2px 0.05px 2px black;
+  text-align: right;
+}
