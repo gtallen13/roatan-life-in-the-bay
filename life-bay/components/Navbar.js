@@ -8,7 +8,7 @@ const Navbar = () => {
             <div className='logo'>
                 <h4>Life in the Bay</h4>
             </div>
-            <label for='btn-Menu' className='icon'>
+            <label htmlFor='btn-Menu' className='icon'>
                 <FontAwesomeIcon icon={faBars} size='2x'/>
             </label>
             <input id='btn-Menu' type="checkbox"/>
@@ -17,7 +17,7 @@ const Navbar = () => {
                 <li><Link href="/Tours/"><a>Tours</a></Link></li>
                 <li><Link href="/Bookings"><a>Book Now</a></Link></li>
                 <li>
-                    <label for="btn-More" className='show'>More</label>
+                    <label htmlFor="btn-More" className='show'>More</label>
                     <Link href="#" ><a>More</a></Link>
                     <input type="checkbox" id="btn-More"/>
                     <ul>

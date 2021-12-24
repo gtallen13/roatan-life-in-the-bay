@@ -32,9 +32,9 @@ const Details = ({tour}) => {
                 clickable: true
                 }}
                 navigation={true}>
-                    {images.map((x)=>(
-                        <SwiperSlide key={x}>
-                            <SlideImage image={x}/>
+                    {tour.images.map((item,i)=>(
+                        <SwiperSlide key={i}>
+                            <SlideImage image={item}/>
                         </SwiperSlide>
                     ))}
                 </Swiper>
@@ -49,9 +49,10 @@ const Details = ({tour}) => {
                     </div>
                     <div>
                         <p>{tour.description}</p>
+                        <p>What to bring:</p>
                         <ul>
-                            {tour.bring_items.map(item=>(
-                                <li>{item}</li>
+                            {tour.bring_items.map((item,i)=>(
+                                <li key={i}>{item}</li>
                                 ))}
                         </ul>
                         <div className="book-now-wrapper">
@@ -86,7 +87,8 @@ export async function getStaticProps({params}){
             description:1,
             price:1,
             bring_items:1,
-            route:1
+            route:1,
+            images:1
         }
     })
     return{

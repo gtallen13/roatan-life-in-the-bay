@@ -31,7 +31,8 @@ export default function Home() {
       autoplay={{
         delay:5000,
         disableOnInteraction:false
-        }}>
+        }}
+        loop={true}>
         <SwiperSlide >
           <Slide name="Thomas Allen" 
           location="La Ceiba, Honduras" 

@@ -23,8 +23,8 @@ const waterActivities = ({activities}) => {
             </Head> 
             <h1 className="titles">Water Activities</h1>
             <div className={styles.slideWrapper}>
-                {activities.map((activity)=>(
-                    <div className={styles.slideCards}>
+                {activities.map((activity,key)=>(
+                    <div className={styles.slideCards} key={key}>
                         <div>
                             <Swiper spaceBetween={50}
                                 slidesPerView={1}
@@ -32,9 +32,9 @@ const waterActivities = ({activities}) => {
                                 delay:2000,
                                 disableOnInteraction:false
                             }}>
-                                {westImages.map((x)=>(
-                                        <SwiperSlide>
-                                            <Image key={x} width={300} height={300} src={x}/>
+                                {activity.images.map((item,key)=>(
+                                        <SwiperSlide key={key}>
+                                            <Image key={item} width={400} height={300} src={item} className={styles.slideImg}/>
                                         </SwiperSlide>
                                     )
                                 )}
@@ -68,7 +68,8 @@ export async function getStaticProps(context){
             name: activity.name,
             description: activity.description,
             prices: activity.prices,
-            bring_items: activity.bring_items
+            bring_items: activity.bring_items,
+            images:activity.images
         }
     })
     return{ 

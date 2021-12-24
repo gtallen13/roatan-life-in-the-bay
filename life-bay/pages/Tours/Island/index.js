@@ -10,7 +10,6 @@ import { connectToDatabase } from '../../../utils/mongodb';
 const tourIsland = ({tours}) => {
     const westImages = ['/west1.jpg','/west2.jpg','/west3.jpg']
     SwiperCore.use([Autoplay]);
-    
     return (
         <div className="page-background">
             <Head>
@@ -19,18 +18,22 @@ const tourIsland = ({tours}) => {
             </Head> 
             <h1 className="titles">Tour the Island</h1>
             <div className={styles.slideWrapper}>
-                {tours.map((tour)=>(
-                    <div className={styles.slideCards}>
-                        <div>
+                {tours.map((tour,key)=>(
+                    // random key generated to avoid `key error` in console
+                    // Math.random().toString(36).substring(2,9)
+                    //removed random key due to potential re-render issue
+                    
+                    <div className={styles.slideCards} key={key}>
+                        <div >
                             <Swiper spaceBetween={50}
                                 slidesPerView={1}
                                 autoplay={{
                                 delay:5000,
                                 disableOnInteraction:false
                             }}>
-                                {westImages.map((x)=>(
-                                        <SwiperSlide>
-                                            <Image key={x} width={400} height={300} src={x} className={styles.slideImg}/>
+                                {tour.images.map((item,key)=>(
+                                        <SwiperSlide key={key}>
+                                            <Image key={key} width={400} height={300} src={item} className={styles.slideImg} />
                                         </SwiperSlide>
                                     )
                                 )}
@@ -63,8 +66,7 @@ export async function getStaticProps(context){
             id: id,
             name: tour.name,
             description: tour.description,
-            price: tour.price,
-            bring_items: tour.bring_items
+            images:tour.images
         }
     })
     return{ 

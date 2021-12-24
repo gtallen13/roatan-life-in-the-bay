@@ -33,6 +33,7 @@ export async function getStaticProps({params}){
             prices:1,
             bring_items:1,
             route:1,
+            images:1
         }
     })
     return{
@@ -61,9 +62,9 @@ const Details = ({activity}) => {
                 pagination={{clickable:true,}}
                 navigation={true}
                 loop={true}>
-                    {images.map((x)=>(
-                        <SwiperSlide key={x}>
-                            <SlideImage image={x}/>
+                    {activity.images.map((item,key)=>(
+                        <SwiperSlide key={key}>
+                            <SlideImage image={item}/>
                         </SwiperSlide>
                     ))}
                 </Swiper>
@@ -86,14 +87,14 @@ const Details = ({activity}) => {
                         <p>{breakLine(activity.description)}</p>
                         <p>Prices:</p>
                         <ul>
-                            {activity.prices.map(price=>(
-                                <li>{price}</li>
+                            {activity.prices.map((price,key)=>(
+                                <li key={key}>{price}</li>
                             ))}
                         </ul>
                         <p>What to bring:</p>
                         <ul>
-                            {activity.bring_items.map(item=>(
-                                <li>{item}</li>
+                            {activity.bring_items.map((item,key)=>(
+                                <li key={key}>{item}</li>
                             ))}
                         </ul>
                         <div className="book-now-wrapper center">
