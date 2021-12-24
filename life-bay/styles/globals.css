@@ -19,7 +19,7 @@ html {
 }
 /* Menu */
 nav {
-  background-color: rgb(31, 30, 30);
+  background-color: #000;
   width: 100%;
 }
 nav::after {
@@ -150,7 +150,7 @@ nav input {
 /* ----------------- */
 /* Footer */
 footer {
-  background-color: rgb(31, 30, 30);
+  background-color: #000;
   display: flex;
   flex-direction: column;
   justify-content: center;
