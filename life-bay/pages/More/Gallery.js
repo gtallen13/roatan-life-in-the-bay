@@ -2,15 +2,12 @@ import { connectToDatabase } from "../../utils/mongodb";
 import styles from '../../styles/Gallery.module.css';
 import Image from "next/image";
 const Gallery = ({images}) => {
-    images.map(image=>{
-        console.log(typeof(image.imgURL))
-    })
     return (
         <div className="text-section gallery">\
             <h1 className="titles">Life in the Bay</h1>
             <div className={styles.galleryContainer}>
-                {images.map(image=>(
-                    <div className={styles.galleryItem}>
+                {images.map((image,key)=>(
+                    <div className={styles.galleryItem} key={key}>
                         <Image className={styles.galleryImg} src={image.imgURL} layout="fill"/>
                     </div>
                 ))}

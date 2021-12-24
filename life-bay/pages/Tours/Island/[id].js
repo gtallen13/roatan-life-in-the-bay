@@ -51,8 +51,8 @@ const Details = ({tour}) => {
                         <p>{tour.description}</p>
                         <p>What to bring:</p>
                         <ul>
-                            {tour.bring_items.map((item,i)=>(
-                                <li key={i}>{item}</li>
+                            {tour.bring_items.map((item,key)=>(
+                                <li key={key}>{item}</li>
                                 ))}
                         </ul>
                         <div className="book-now-wrapper">

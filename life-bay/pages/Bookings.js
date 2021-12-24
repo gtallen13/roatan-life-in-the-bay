@@ -42,8 +42,8 @@ const Bookings = ({tours}) => {
                         <div className={styles.frmRow}>
                             <div className={styles.frmItems}>
                                 <p>Tour*</p>
-                                {tours.map(tour=>(
-                                    <Checkbox id={tour.id} text={tour.info}/>
+                                {tours.map((tour,key)=>(
+                                    <Checkbox id={tour.id} text={tour.info} key={key}/>
                                 ))}
                                 <Checkbox id="1" text="Fishing Charter 1/2 day $300-350"/>
                                 <Checkbox id="2" text="Fishing Charter Full day $500-600"/>
@@ -93,20 +93,6 @@ export async function getStaticProps(){
             info: info
         }
     })
-
-    // const dataActivities = await db 
-    // .collection("activities")
-    // .find()
-    // .toArray()
-
-    // const activities = dataActivities.map(activity=>{
-    //     const id = JSON.parse(JSON.stringify(tour._id))
-        
-    //     return{
-            
-    //     }
-    // })
-
     return {
         props:{tours}
     }
