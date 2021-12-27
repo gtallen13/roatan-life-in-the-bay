@@ -43,7 +43,7 @@
   transition: all 1s;
   border: none;
   border-bottom: 2px solid black;
-  opacity: 0.7;
+  opacity: 0.6;
   border-radius: 5px 5px 0 0;
   font-size: 15px;
   background-color: #d8c6ac;
@@ -55,9 +55,6 @@
 }
 .frmItems label {
   font-size: 18px;
-}
-.frmItems input {
-  width: fit-content;
 }
 .btnConfirm {
   padding: 20px;
@@ -96,7 +93,7 @@ a.btnBuild {
   transition: all 1s;
   border: none;
   border-bottom: 2px solid black;
-  opacity: 0.7;
+  opacity: 0.6;
   border-radius: 5px 5px 0 0;
   background-color: #d8c6ac;
   font-size: 15px;
@@ -105,4 +102,35 @@ a.btnBuild {
   border-bottom: 2px solid #115c8a;
   outline: none;
   opacity: 1;
+}
+@media all and (max-width: 968px) {
+  .frmRow {
+    width: 100%;
+    flex-direction: column;
+  }
+  .frmItems {
+    width: 100%;
+  }
+  .frmItems input {
+    width: 90% !important;
+  }
+  .frmItems select {
+    width: 96% !important;
+  }
+  .checkboxContainer input {
+    width: fit-content !important;
+  }
+  .btnConfirm {
+    width: 55%;
+    padding: 15px;
+  }
+  .txtArea {
+    width: 100%;
+    justify-content: center;
+    align-items: baseline;
+    margin: 10px;
+  }
+  .txtArea input {
+    width: 90%;
+  }
 }

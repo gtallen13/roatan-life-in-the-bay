@@ -31,7 +31,8 @@ const Details = ({tour}) => {
                 pagination={{
                 clickable: true
                 }}
-                navigation={true}>
+                navigation={true}
+                className="route-slider">
                     {tour.images.map((item,i)=>(
                         <SwiperSlide key={i}>
                             <SlideImage image={item}/>
@@ -50,7 +51,7 @@ const Details = ({tour}) => {
                     <div>
                         <p>{tour.description}</p>
                         <p>What to bring:</p>
-                        <ul>
+                        <ul className="items-list">
                             {tour.bring_items.map((item,key)=>(
                                 <li key={key}>{item}</li>
                                 ))}

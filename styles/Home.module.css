@@ -30,6 +30,7 @@
   flex-direction: column;
   align-content: center;
   margin: 0;
+  text-shadow: 0 0 5px whitesmoke;
 }
 
 .bannerText i {
@@ -42,4 +43,9 @@
   margin: 0;
   position: absolute;
   top: 105px;
+}
+@media all and (max-width: 968px) {
+  .bannerText h1 {
+    font-size: 6em;
+  }
 }

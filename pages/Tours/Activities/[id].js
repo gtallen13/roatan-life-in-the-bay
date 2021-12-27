@@ -61,7 +61,8 @@ const Details = ({activity}) => {
                 spaceBetween={50}
                 pagination={{clickable:true,}}
                 navigation={true}
-                loop={true}>
+                loop={true}
+                className="route-slider">
                     {activity.images.map((item,key)=>(
                         <SwiperSlide key={key}>
                             <SlideImage image={item}/>
@@ -86,13 +87,13 @@ const Details = ({activity}) => {
                     <div>
                         <p>{breakLine(activity.description)}</p>
                         <p>Prices:</p>
-                        <ul>
+                        <ul className="items-list">
                             {activity.prices.map((price,key)=>(
                                 <li key={key}>{price}</li>
                             ))}
                         </ul>
                         <p>What to bring:</p>
-                        <ul>
+                        <ul className="items-list">
                             {activity.bring_items.map((item,key)=>(
                                 <li key={key}>{item}</li>
                             ))}

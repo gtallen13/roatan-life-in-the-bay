@@ -12,7 +12,7 @@ SwiperCore.use([Parallax,Pagination,Navigation]);
 const Covid = () => {
     return (
         <div>
-            <Head>
+            <Head> 
                 <title>COVID-19 Precautions | Roatan Life in the Bay</title>
                 <meta name="keywords" content="covid,info,tour,island,roatan,tours,bay islands"></meta>
             </Head> 
@@ -21,7 +21,7 @@ const Covid = () => {
                 speed={600} parallax={true} 
                 pagination={{"clickable": true}} 
                 navigation={true} 
-                className="mySwiper">
+                className="covid-swiper">
                 <div slot="container-start" className="parallax-bg" 
                 data-swiper-parallax="-23%"></div>
                 <SwiperSlide>

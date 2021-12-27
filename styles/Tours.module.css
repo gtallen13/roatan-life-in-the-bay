@@ -6,6 +6,7 @@
   background-color: whitesmoke;
   height: 100vh;
 }
+
 .galleryContainer {
   margin: 10px;
   background-color: whitesmoke;
@@ -84,4 +85,32 @@
 }
 .slideCards a:hover {
   color: #115c8a;
+}
+
+@media all and (max-width: 968px) {
+  .galleryWrapper {
+    flex-direction: column;
+    position: relative;
+    height: 130vh;
+    justify-content: flex-start;
+  }
+  .galleryContainer {
+    width: 80%;
+  }
+  .galleryTitle {
+    font-size: 22px;
+  }
+  .slideWrapper {
+    flex-direction: column;
+    height: 250vh;
+  }
+  .slideCards {
+    width: 70%;
+    margin: 10px;
+    position: relative;
+  }
+  .slideCards h4 {
+    margin-top: 15px;
+    font-size: 35px;
+  }
 }
