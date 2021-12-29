@@ -17,6 +17,7 @@ const Covid = () => {
                 <meta name="keywords" content="covid,info,tour,island,roatan,tours,bay islands"></meta>
             </Head> 
             <div className="text-section covid ">
+                <div className="parallax-overlay"></div>
                 <Swiper    
                 speed={600} parallax={true} 
                 pagination={{"clickable": true}} 

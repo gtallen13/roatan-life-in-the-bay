@@ -4,7 +4,7 @@ import {breakLine} from "../../../utils/textMods"
 import Link from 'next/link';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMapSigns } from "@fortawesome/free-solid-svg-icons";
+import { faMapMarkedAlt } from "@fortawesome/free-solid-svg-icons";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation'
@@ -73,16 +73,17 @@ const Details = ({activity}) => {
             <div className="center">
                 <section className="text-section activity">
                     <div className="route-container">
-                        <p className="route-text">Checkout the route !</p>
                         {(activity.route.length)===2  ?
                             // <p>{activity.route.length}</p>
                             (<a href={`https://www.google.com/maps/dir/?api=1&origin=${activity.route[0]}&destination=${activity.route[1]}`} target="_blank">
-                                <FontAwesomeIcon icon={faMapSigns} size="6x" className="map-icon"/>
+                                <FontAwesomeIcon icon={faMapMarkedAlt} size="6x" className="map-icon"/>
                             </a>):
                             (<a href={`https://www.google.com/maps/search/?api=1&query=${activity.route[0]}`} target="_blank">
                                 <FontAwesomeIcon icon={faMapSigns} size="6x" className="map-icon"/>
                             </a>)
                         }
+                        <p className="route-text">Checkout the route !</p>
+
                     </div>
                     <div>
                         <p>{breakLine(activity.description)}</p>
