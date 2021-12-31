@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 body,
 html {
   padding: 0;
@@ -183,7 +182,7 @@ footer span {
   color: whitesmoke;
   width: 100%;
   text-align: center;
-  font-family: "Zen Old Mincho", serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 70px;
 }
 .slide-container {
@@ -203,7 +202,7 @@ footer span {
   justify-content: center;
   align-items: flex-start;
   position: relative;
-  font-family: "Zen Old Mincho", serif;
+  font-family: "Open Sans", sans-serif;
   z-index: 100;
 }
 .bottom-center {
@@ -249,7 +248,7 @@ footer span {
 .text-section {
   position: relative;
   text-align: justify;
-  font-family: "Zen Old Mincho", serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 20px;
   width: 80%;
   height: max-content;
@@ -308,7 +307,7 @@ span.price {
 .route-container .route-text {
   margin-bottom: 10px;
   font-size: 20px;
-  font-family: "Zen Old Mincho", serif;
+  font-family: "Open Sans", sans-serif;
 }
 .map-icon {
   color: #03033a;
@@ -362,8 +361,9 @@ span.swiper-pagination-bullet {
   padding: 10px;
   margin: 10px;
   border-radius: 20px;
-  font-size: 25px;
+  font-size: 20px;
   max-width: 60%;
+  font-family: "Open Sans", sans-serif;
   opacity: 0.8;
 }
 .swiper-slide .titles {
