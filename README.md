@@ -36,7 +36,7 @@ Make sure to rename the **.env.local.example** file to **.env.local**
 
 ## Dependencies used
 The dependencies used on this project were:
--Fontawesome
--MongoDB
--Swiper
+- Fontawesome
+- MongoDB
+- Swiper
 
