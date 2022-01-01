@@ -15,16 +15,16 @@ const Contact = () => {
                 <form className={styles.bookingFrm}>
                     <div className={styles.frmRow}>
                         <div className={styles.frmItems}>
-                            <label for="txtName">Full Name</label>
+                            <label htmlFor="txtName">Full Name</label>
                             <input type="text" id='txtName'/>
                         </div>
                         <div className={styles.frmItems}>
-                            <label for="txtEmail">Email</label>
+                            <label htmlFor="txtEmail">Email</label>
                             <input type="email" id='txtEmail'/>
                         </div>
                     </div>
                     <div className={styles.txtArea}>
-                        <label for="txtHelp">How can we help you?</label>
+                        <label htmlFor="txtHelp">How can we help you?</label>
                         <input type="text" id='txtHelp'/>
 
                     </div>

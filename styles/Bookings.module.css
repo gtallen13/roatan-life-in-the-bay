@@ -27,13 +27,12 @@
   border: none;
   border-bottom: 2px solid black;
   opacity: 0.7;
-  border-radius: 5px 5px 0 0;
-  background-color: #d8c6ac;
   font-size: 15px;
-}
-.frmItems input:focus {
-  border-bottom: 2px solid #115c8a;
   outline: none;
+  background-color: transparent;
+}
+.frmItems input:hover {
+  border-bottom: 2px solid #115c8a;
   opacity: 1;
 }
 .frmItems select {
@@ -44,11 +43,10 @@
   border: none;
   border-bottom: 2px solid black;
   opacity: 0.7;
-  border-radius: 5px 5px 0 0;
   font-size: 15px;
-  background-color: #d8c6ac;
+  background-color: transparent;
 }
-.frmItems select:focus {
+.frmItems select:hover {
   border-bottom: 2px solid #115c8a;
   outline: none;
   opacity: 1;
@@ -67,11 +65,11 @@
   cursor: pointer;
   border: none;
   border-radius: 10px;
-  background-color: #115c8a;
   color: whitesmoke;
   transition: all 0.5s;
   opacity: 0.7;
   font-size: 30px;
+  background-color: #115c8a;
   font-family: "Dancing Script", cursive;
 }
 .btnConfirm:hover {
@@ -90,6 +88,9 @@ a.btnBuild {
   display: flex;
   flex-direction: column;
 }
+.txtArea label {
+  font-size: 18px;
+}
 .txtArea input {
   padding: 10px;
   margin: 10px;
@@ -97,12 +98,11 @@ a.btnBuild {
   border: none;
   border-bottom: 2px solid black;
   opacity: 0.7;
-  border-radius: 5px 5px 0 0;
-  background-color: #d8c6ac;
   font-size: 15px;
-}
-.txtArea input:focus {
-  border-bottom: 2px solid #115c8a;
+  background-color: transparent;
   outline: none;
+}
+.txtArea input:hover {
+  border-bottom: 2px solid #115c8a;
   opacity: 1;
 }
