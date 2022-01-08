@@ -3,7 +3,7 @@ const Checkbox = ({text, id}) => {
     return (
         <div className={styles.checkboxContainer}>
             <input type="checkbox" id={id} name={id}/>
-            <label for={id}>{text}</label>
+            <label htmlFor={id}>{text}</label>
         </div>
     );
 }

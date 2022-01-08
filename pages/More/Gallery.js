@@ -3,7 +3,7 @@ import styles from '../../styles/Gallery.module.css';
 import Image from "next/image";
 const Gallery = ({images}) => {
     return (
-        <div className="text-section gallery">\
+        <div className="text-section gallery">
             <h1 className="titles">Life in the Bay</h1>
             <div className={styles.galleryContainer}>
                 {images.map((image,key)=>(

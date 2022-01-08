@@ -20,22 +20,22 @@ const Bookings = ({tours}) => {
                     <form className={styles.bookingFrm}>
                         <div className={styles.frmRow}>
                             <div className={styles.frmItems}>
-                                <label for="txtName">Full Name*</label>
+                                <label htmlFor="txtName">Full Name*</label>
                                 <input required type="text" id="txtName" name="txtName" placeholder="Luke Johnson"/>
                             </div>
                             <div className={styles.frmItems}>
-                                <label for="txtEmail">Email*</label>
+                                <label htmlFor="txtEmail">Email*</label>
                                 <input required type="email" id="txtEmail" name="txtEmail" placeholder="ljohnson17@baylife.com"/>
 
                             </div>
                         </div>
                         <div className={styles.frmRow}>
                             <div className={styles.frmItems}>
-                                <label for="txtDate">Date*</label>
+                                <label htmlFor="txtDate">Date*</label>
                                 <input required type="datetime-local" id="txtDate" name="txtDate"/>
                             </div>
                             <div className={styles.frmItems}>
-                                <label for="txtShipResort">Ship/Resort Name*</label>
+                                <label htmlFor="txtShipResort">Ship/Resort Name*</label>
                                 <input required type="text" id="txtShipResort" name="txtShipResort"/>
                             </div>
                         </div>
@@ -51,7 +51,7 @@ const Bookings = ({tours}) => {
                                 <Checkbox id="4" text="Beach Day $30/person"/>
                             </div>
                             <div className={styles.frmItems}>
-                            <label for="select-transport">Need Transportation*</label>
+                            <label htmlFor="select-transport">Need Transportation*</label>
                                 <select name="select-transport" id="select-transport" required>
                                     <option value="yes">Yes, please!</option>
                                     <option value="no">No, thank you</option>
@@ -60,11 +60,11 @@ const Bookings = ({tours}) => {
                         </div>
                         <div className={styles.frmRow}>
                             <div className={styles.frmItems}>
-                                <label for="txt5>">Number of guests 5yrs and older*</label>
+                                <label htmlFor="txt5>">Number of guests 5yrs and older*</label>
                                 <input type="number" id="txt5>" name="txt5>" required/>
                             </div>
                             <div className={styles.frmItems}>
-                                <label for="txt4<">Number of guests 4yrs and under*</label>
+                                <label htmlFor="txt4<">Number of guests 4yrs and under*</label>
                                 <input type="number" id="txt4<" name="txt4<" required/>
                             </div>
                         </div>

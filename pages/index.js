@@ -5,9 +5,11 @@ import stylesConstants from '../styles/Constants.module.css';
 import Slide from '../components/Slideshow/Slide'
 import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
-import SwiperCore, {Autoplay} from 'swiper';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation'
+import SwiperCore, { Pagination, Navigation } from "swiper";
+SwiperCore.use([Pagination, Navigation]);
 export default function Home() {
-  SwiperCore.use([Autoplay]);
 
   return (
     <div>
@@ -28,11 +30,10 @@ export default function Home() {
       <Swiper
       spaceBetween={50}
       slidesPerView={1}
-      autoplay={{
-        delay:5000,
-        disableOnInteraction:false
-        }}
-        loop={true}>
+      pagination={{clickable:true}}
+      navigation={true}
+        loop={true}
+        className='home-swiper'>
         <SwiperSlide >
           <Slide name="Thomas Allen" 
           location="La Ceiba, Honduras" 

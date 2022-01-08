@@ -1,6 +1,6 @@
 import { ObjectId } from "bson";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faMapSigns} from '@fortawesome/free-solid-svg-icons'
+import {faMapMarkedAlt} from '@fortawesome/free-solid-svg-icons'
 import { connectToDatabase } from "../../../utils/mongodb";
 import Head from 'next/head';
 import Link from 'next/link';
@@ -31,7 +31,8 @@ const Details = ({tour}) => {
                 pagination={{
                 clickable: true
                 }}
-                navigation={true}>
+                navigation={true}
+                className="route-slider">
                     {tour.images.map((item,i)=>(
                         <SwiperSlide key={i}>
                             <SlideImage image={item}/>
@@ -42,15 +43,15 @@ const Details = ({tour}) => {
             <div className="center">
                 <section className="text-section tours">
                     <div className="route-container">
-                        <p>Checkout the route !</p>
                         <a href={`https://www.google.com/maps/dir/?api=1&origin=${originPoint}&destination=${destinationPoint}&travelmode=driving`} target="_blank">
-                            <FontAwesomeIcon icon={faMapSigns} size="6x" className="map-icon"/>
+                            <FontAwesomeIcon icon={faMapMarkedAlt} size="6x" className="map-icon"/>
                         </a>
+                        <p className="route-text">Checkout the route !</p>
                     </div>
                     <div>
                         <p>{tour.description}</p>
                         <p>What to bring:</p>
-                        <ul>
+                        <ul className="items-list">
                             {tour.bring_items.map((item,key)=>(
                                 <li key={key}>{item}</li>
                                 ))}
