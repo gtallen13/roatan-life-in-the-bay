@@ -8,6 +8,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation'
 import SwiperCore, { Pagination, Navigation } from "swiper";
+import Loader from '../components/Loader';
 SwiperCore.use([Pagination, Navigation]);
 export default function Home() {
 
@@ -19,7 +20,7 @@ export default function Home() {
       </Head> 
       {/* Banner Section */}
       <div className={styles.bannerContainer}>  
-        <Image className={styles.bannerImage} layout='fill' src="/banner3.jpg"/>
+        <Image className={styles.bannerImage} layout='fill' src="/banner3.jpg" placeholder='blur' blurDataURL='/banner3.jpg'/>
         <div className={styles.bannerText}>
             <h1 className={stylesConstants.textPrimary}>ROATAN
                 <i className={stylesConstants.textSecondary}>Life in the Bay</i>

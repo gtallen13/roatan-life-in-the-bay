@@ -7,9 +7,8 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import SwiperCore, {Autoplay} from 'swiper';
 import { connectToDatabase } from '../../../utils/mongodb';
+SwiperCore.use([Autoplay]);
 const tourIsland = ({tours}) => {
-    const westImages = ['/west1.jpg','/west2.jpg','/west3.jpg']
-    SwiperCore.use([Autoplay]);
     return (
         <div className="page-background">
             <Head>

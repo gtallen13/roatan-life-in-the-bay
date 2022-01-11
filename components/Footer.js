@@ -9,7 +9,7 @@ const Footer = () => {
             <Image src="/logo.svg" alt="logo" width={100} height={90}/>
             <div className="social-links">
                 <a href="https://instagram.com/roatanlifeinthebay?igshid=vl0jxr46jiao" target="_blank">
-                    <i><FontAwesomeIcon icon={faInstagram}/></i>
+                    <i ><FontAwesomeIcon icon={faInstagram}/></i>
                 </a>
                 <i>|</i>
                 <a href="https://www.facebook.com/roatanlifeinthebay" target="_blank">

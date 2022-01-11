@@ -6,9 +6,8 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import SwiperCore, {Autoplay} from 'swiper';
 import { connectToDatabase } from '../../../utils/mongodb';
+SwiperCore.use([Autoplay]);
 const waterActivities = ({activities}) => {
-    const westImages = ['/west1.jpg','/west2.jpg','/west3.jpg']
-    SwiperCore.use([Autoplay]);
     //helps shorten description from DB
     const descriptionLimiter = (string='',limit=0)=>{
         return string.substring(0,limit);
@@ -42,7 +41,7 @@ const waterActivities = ({activities}) => {
                         </div>
                         <Link href={`/Tours/Activities/${activity.id}`}><h4>{activity.name}</h4></Link>
                         <p>{descriptionLimiter(activity.description,150)}
-                            <Link href={`/Tours/Activities/${activity.id}`}>
+                            <Link href={`/Tours/Activities/${activity.id}`} >
                                 <a>...Read More</a>
                             </Link>
                         </p>
@@ -69,7 +68,8 @@ export async function getStaticProps(context){
             description: activity.description,
             prices: activity.prices,
             bring_items: activity.bring_items,
-            images:activity.images
+            images:activity.images,
+            route:activity.route
         }
     })
     return{ 

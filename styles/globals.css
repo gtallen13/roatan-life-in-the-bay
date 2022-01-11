@@ -479,3 +479,33 @@ span.swiper-pagination-bullet {
     font-size: 60px;
   }
 }
+.loader-container {
+  height: 100vh;
+  position: relative;
+}
+.loader-container h3 {
+  font-family: "Dancing Script", cursive;
+  font-size: 60px;
+}
+.not-found {
+  height: 80vh;
+}
+.not-found-msg {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.not-found h3 {
+  font-family: "Dancing Script", cursive;
+  font-size: 60px;
+  margin-left: 20px;
+}
+.not-found a {
+  font-size: 30px;
+  text-decoration: none;
+  background-color: #0e0e0e;
+  color: whitesmoke;
+  padding: 15px;
+  border-radius: 10px;
+  font-family: "Zen Old Mincho", serif;
+}

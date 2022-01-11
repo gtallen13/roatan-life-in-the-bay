@@ -13,9 +13,9 @@ SwiperCore.use([Pagination, Navigation]);
 import SlideImage from '../../../components/Slideshow/SlideImage'
 
 const Details = ({tour}) => {
-    const images = ['/banner1.jpg','/banner2.jpg','/banner3.jpg'];
     const originPoint = tour.route[0];
     const destinationPoint = tour.route[1];
+    console.log(tour);
     return (
         <div className="page-background">
             <Head>
@@ -35,7 +35,7 @@ const Details = ({tour}) => {
                 className="route-slider">
                     {tour.images.map((item,i)=>(
                         <SwiperSlide key={i}>
-                            <SlideImage image={item}/>
+                            <SlideImage image={item} alt={`${tour.name} banner image`}/>
                         </SwiperSlide>
                     ))}
                 </Swiper>
