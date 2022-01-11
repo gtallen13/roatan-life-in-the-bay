@@ -1,0 +1,76 @@
+[{
+  "_id": {
+    "$oid": "61993baab11166d5c56417d9"
+  },
+  "name": "Fishing Charters",
+  "description": "Let's load up the poles and head out for a great day of deep sea fishing! Common catches are black fin tuna and blue runner jacks. Local trophy fish include wahoo, barracuda, billfish, grouper, mahi mahi, and snapper. Choose a half day (4 hrs.) or full day (8 hrs.) depending on what best fits your schedule. Our goal is to help you make unforgettable memories and leave you with your best fish story for years to come! ",
+  "prices": [
+    "Half Day: $300 (1 -5 people) $350 (6 - 8 people) ",
+    "Full Day: Lunch included! $500 (1 -5 people) $600 (6 -8 people) "
+  ],
+  "bring_items": [
+    "Hat",
+    "Towel",
+    "Sunscreen",
+    "Sunglasses",
+    "Anything else you may need"
+  ],
+  "route": [
+    "16.35189729131971%2C-86.4450858174676",
+    "16.31562644037484%2C-86.49402281699679"
+  ],
+  "images": [
+    "https://scontent.fsap1-1.fna.fbcdn.net/v/t1.6435-9/56119554_1006412996222297_1793553006797520896_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeF_yod9qHCBh47gnmpqFR62AAhuuF6tFcgACG64Xq0VyGjeXGoRDpFpCjUVmRIwjTZVxW7wQkYmQIbL7vdZIq30&_nc_ohc=uhGkX-L8_4QAX8f6Ic8&_nc_ht=scontent.fsap1-1.fna&oh=00_AT-LC-PRyjfQF3LRJV9HeWgu3YJwgMvcPg0O-4pfiwQLjg&oe=61EB8462",
+    "https://scontent.fsap1-2.fna.fbcdn.net/v/t1.6435-9/56270046_1006412879555642_5190669441246953472_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeE0id4Wcke4xQqjCp3u2yspaw8WF0GU-GlrDxYXQZT4aWtLKv6DnCPsQVctu8goxVTfB9E4usOR9o_i_e1HsFTa&_nc_ohc=VGbPwRJfDrgAX-cLIvM&_nc_ht=scontent.fsap1-2.fna&oh=00_AT-KTryxVFS4qDNfuPD99AZCd53miSTo5aLEaj6G0hs0Tg&oe=61ECBBAD",
+    "https://scontent.fsap1-2.fna.fbcdn.net/v/t1.6435-9/56201256_1006412932888970_8919184508578693120_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeFngpZM3F2k5vi5fDgsgxmpxwrAa333nebHCsBrffed5pASDk7-ChUdiy72JhDlDoFzK35GQL67MgNugqwJzbVB&_nc_ohc=UeeL5NP4wHkAX_pqDUI&_nc_ht=scontent.fsap1-2.fna&oh=00_AT8hIa4ecI3v611_jpG-tQfFMM6FV1oSd6Ao-R-Cy8c9XA&oe=61EBA91F"
+  ]
+},{
+  "_id": {
+    "$oid": "61993c5eb11166d5c56417da"
+  },
+  "name": "Snorkeling",
+  "description": "You might not have heard yet, but you will soon be traveling to the home of the world's 2nd largest barrier reef - The Mesoamerican Barrier Reef! This is an experience we suggest you do not miss! Snorkeling is a favorite activity for tourists and locals alike. There is an abundance of marine life to see and each trip gives you a unique and close-up experience with the reef and animals that live there. Keep a close eye out for different types of fish, lobsters, eels, rays, and reef squid that frequently like to join our trips! Our experienced snorkel guides will help point you to some of their secret hiding spots! \\nSanitized snorkel, mask, and fins provided, but feel free to bring your own! There will be changing rooms and bathrooms available before and after snorkeling. \\n In addition to your underwater adventure, we will take you to spend some time with some of our favorite land-loving animals including monkeys, sloths, and birds at the local animal park! ",
+  "prices": [
+    "$30/person   ",
+    "*2nd snorkel stop for additional $5/person",
+    "Children aged 4 and younger are free!​"
+  ],
+  "bring_items": [
+    "Swimsuit",
+    "Towel",
+    "Sunscreen",
+    "Anything else you may need"
+  ],
+  "route": [
+    "16.352172915202996%2C-86.44258592466704"
+  ],
+  "images": [
+    "https://scontent.fsap1-1.fna.fbcdn.net/v/t1.6435-9/55759821_1005183789678551_4233709809544724480_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeF4tlhBPfht7Dif5bSqjblVWRGRaHSysFVZEZFodLKwVZhYWAxe1wpL0m3oofEu1QK4vp15IMZfmaUjdVJiu-CG&_nc_ohc=iWRnuUb5H30AX80-UTx&_nc_ht=scontent.fsap1-1.fna&oh=00_AT_Oln9pc_tcY9FjN284gVWq6snXixHgbijkx4Jet88zdg&oe=61EAE43F",
+    "https://scontent.fsap1-2.fna.fbcdn.net/v/t1.6435-9/56420952_1005182633012000_2553436298891231232_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeHNxuuAzUSFWkbpcEAvyVB_EljIKe0cTz4SWMgp7RxPPreireBzSOfQo6K7GfgeYmsZ2tmijT_AkSVGH7xRw_mM&_nc_ohc=-vwFNhObMEAAX_eHlpR&_nc_ht=scontent.fsap1-2.fna&oh=00_AT9BMks-p_h6FYnk7x0RCHEygg84lMpFOd95tllpr9NOFw&oe=61EC7EE7",
+    "https://scontent.fsap1-1.fna.fbcdn.net/v/t1.6435-9/67402048_1086337338229862_7604792673391607808_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeFOmFP_EuORxlpq1sZu4nbRdHGHNmTtNwV0cYc2ZO03BQucA3hLx7bKcIK7187z8itfSBuBCLg9-AYZydvrlXBw&_nc_ohc=APRcDHdGMjYAX9e_BVE&_nc_ht=scontent.fsap1-1.fna&oh=00_AT9tivVYA60Kl0ulSA02IOQf64gbEEKkjC-7KWbRW7aDbg&oe=61EC85D8"
+  ]
+},{
+  "_id": {
+    "$oid": "61993dc1b11166d5c56417db"
+  },
+  "name": "Kayaking",
+  "description": "Take a guided kayak tour on the south side of the island. Paddle your way through the mangroves and make your way to a local beach. Snorkeling is part of the experience too! You might not have heard yet, but you will soon be traveling to the home of the world's 2nd largest barrier reef - The Mesoamerican Barrier Reef! This is an experience we suggest you do not miss! Snorkeling is a favorite activity for tourists and locals alike. There is an abundance of marine life to see and each trip gives you a unique and close-up experience with the reef and animals that live there. Keep a close eye out for different types of fish, lobsters, eels, rays, and reef squid that frequently like to join our trips! Our experienced snorkel guides will help point you to some of their secret hiding spots!\n\\\\n Sanitized snorkel, mask, and fins provided, but feel free to bring your own! There will be changing rooms and bathrooms available before and after snorkeling.\n\\\\n In addition to your kayaking adventure, we will take you to spend some time with some of our favorite land-loving animals including monkeys, sloths, and birds at the local animal sanctuary!\n",
+  "prices": [
+    "$60/Person\n",
+    "Children aged 4 and younger are free!\n"
+  ],
+  "bring_items": [
+    "Swimsuit",
+    "Towel",
+    "Sunscreen",
+    "Anything else you may need"
+  ],
+  "route": [
+    "16.352172915202996%2C-86.44258592466704"
+  ],
+  "images": [
+    "https://scontent.fsap1-2.fna.fbcdn.net/v/t1.6435-9/83008116_1237430709787190_7608209255451066368_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeFODuxrg1mO2sW0MVCRA0duoyTe18TTpf-jJN7XxNOl__IIuwNnEOKdV1m60LOPmI_L4XA_WdtTRNjdVPAjlzBb&_nc_ohc=6FD6WLUGdckAX-DKznI&_nc_ht=scontent.fsap1-2.fna&oh=00_AT9TnVItu-GuBnIVvt0sPmfnmKpi323qayuvu-kushVbBA&oe=61EC2466",
+    "https://images.unsplash.com/photo-1588472235276-7638965471e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80",
+    "https://images.unsplash.com/photo-1554913968-6ba85b94df1f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80"
+  ]
+}]

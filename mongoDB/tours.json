@@ -1,0 +1,71 @@
+[{
+  "_id": {
+    "$oid": "618cb458b90c732a8acf9f17"
+  },
+  "name": "West Side Tour",
+  "description": "The west side of the island is known for its luxurious resorts and beautiful West Bay beach. This tour is made for those who would like to explore the more developed end of the island. Spend time on the beach and stroll through West End village where there are plenty of small shops to find unique souvenirs. Of course your tour couldn't be complete without spending some time with some of our favorite land-loving animals including monkeys, sloths, and birds at the local animal sanctuary! During your drive, there will be plenty of photo opportunities and your guide will tell you about the island's history and culture. Get hungry along the way? No problem! Our local cuisine is one thing we take pride in the most around here, and we can direct you to several different options with different menu selections and at varying price ranges that best suit you.",
+  "price": 35,
+  "bring_items": [
+    "Additional spending money (if you want food or souvenirs)",
+    "Sunscreen",
+    "Sunglasses",
+    "Bathing Suit",
+    "Towel",
+    "Anything else you may need"
+  ],
+  "route": [
+    "16.355881501708936%2C-86.446341261895",
+    "16.35609159943212%2C-86.45912303788035"
+  ],
+  "images": [
+    "https://images.unsplash.com/photo-1546473394-34664d71afad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    "https://images.unsplash.com/photo-1594477580457-c1231e900153?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHJvYXRhbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+    "https://images.unsplash.com/photo-1581655915246-c4db17980549?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+  ]
+},{
+  "_id": {
+    "$oid": "618cb68fb90c732a8acf9f1b"
+  },
+  "name": "East Side Tour",
+  "description": "The east side of the island is less developed and holds true to the more island-style way of life. This end of the island is less commercialized and shows a lot more of the island's natural flora and the islanders' typical lifestyle. Take a trip through the shaded mangrove canals on a motorized canoe (known locally as a dory), make a stop in Punta Gorda to experience one of Roatan's most culturally rich communities. During the drive, there will be plenty of photo opportunities and your guide will tell you about the island's history and culture. Get hungry along the way? No problem! Our local cuisine is one thing we take pride in the most around here, and we can direct you to several different options with different menu selections and at varying price ranges that best suit you.",
+  "price": 35,
+  "bring_items": [
+    "additional spending money (if you want food or souvenirs)",
+    "sunscreen",
+    "sunglasses",
+    "anything else you may need"
+  ],
+  "route": [
+    "16.35609159943212%2C-86.45912303788035",
+    "16.35603467333362%2C-86.44647609015252"
+  ],
+  "images": [
+    "https://images.unsplash.com/photo-1600273970168-c3db62dcf905?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cm9hdGFufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60",
+    "https://images.unsplash.com/photo-1581697003127-559f6359486d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cm9hdGFufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60",
+    "https://images.unsplash.com/photo-1594475744568-cc14ab08ba76?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=812&q=80"
+  ]
+},{
+  "_id": {
+    "$oid": "618cb6f7b90c732a8acf9f1c"
+  },
+  "name": "Full Island Tour",
+  "description": "Get the most out of your island excursion from traveling from the west end to the east end of the island. Each end of the island definitely has its own unique sights and experiences to offer. We particularly recommend this tour for those who want to fully experience the diverse culture that can be found here on the island. Spend some time on the island's most popular West Bay beach, walk and shop in the laid-back West End village, and spend some time with the monkeys and sloths at a local animal sanctuary! You'll drive through many of the the different communities along the way that make up this beautiful island. Your guide will tell you all about the history of the island and different cultures along the way! During your drive, there will be plenty of great photo opportunities as well as different shops that offer local treats and souvenirs available to you, if you would like. Get hungry along the way? No problem! Our local cuisine is one thing we take pride in the most here, and we can direct you to several different ​options with different menu selections and at varying price ranges that best suit you.",
+  "price": 45,
+  "bring_items": [
+    "additional spending money (if you want food or souvenirs)",
+    "sunscreen",
+    "sunglasses",
+    "bathing suit",
+    "towels",
+    "anything else you may need"
+  ],
+  "route": [
+    "16.35609159943212%2C-86.45912303788035",
+    "16.35603467333362%2C-86.44647609015252"
+  ],
+  "images": [
+    "https://images.unsplash.com/photo-1589687909592-726346df2e98?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHJvYXRhbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+    "https://images.unsplash.com/photo-1625106550124-04719f904534?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHJvYXRhbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+    "https://ca-times.brightspotcdn.com/dims4/default/b89c216/2147483647/strip/true/crop/2048x1360+0+0/resize/1440x956!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fe1%2F34%2F96b7bf05618b8d3b0def9ef536bd%2Fla-tr-d-honduras-photos-008"
+  ]
+}]
