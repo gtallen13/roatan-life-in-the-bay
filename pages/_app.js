@@ -17,10 +17,11 @@ function MyApp({ Component, pageProps }) {
   })
   return (
     <>
-      {loading && <Loader/>}
+      {loading?<Loader/>:
       <Layout>
-          <Component {...pageProps} />
+        <Component {...pageProps} />
       </Layout>
+  }
     </>
   )
 }
