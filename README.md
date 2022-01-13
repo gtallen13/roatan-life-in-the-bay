@@ -17,9 +17,8 @@ This project is based of the [official website](https://www.roatanlifeinthebay.c
 NOTE: This project was made for educational purposes only. This project is licensed under the terms of the GNU GPLv3 license.
 
 ## Installation
-
 NOTE: Node.js must be installed on your computer. If you don't have it installed then [click here](https://nodejs.org/en/download/) to install the version for your OS.
-
+### Node
 First, install node modules file
 
 ```bash
@@ -27,7 +26,7 @@ npm install
 # or
 yarn install
 ```
-
+### Running Dev Server
 Second, run the development server:
 
 ```bash
@@ -37,7 +36,11 @@ yarn dev
 ```
 
 After running this command it will display the address where the server is running, follow that address to use the website.
-Make sure to rename the **.env.local.example** file to **.env.local**
+### Setting up Mongo
+Firstly you will have to [create an account](https://www.mongodb.com/) on Mongo. Then you will have to follow the steps starting from creating your cluster until connecting to the cluster. After doing this you will be able to get your **MONGODB_URI**. Head over to the Database screen then select the Connect button, this will then show a pop-up screen. Here you will select the option that says Connnect your application then copy the string that is showed and follow the steps displayed below that string to then get your **MONGODB_URI**. The second enviroment variable will be **MONGODB_DB** which is simply the name you decided for the created database. After doing this simply rename the **.env.local.example** to **.env.local** and change the values of the respective enviroment variables.
+To make use of the database you must import the collections which are in **/mongoDB**. An easy way to import these would be using [MongoDB Compass](https://www.mongodb.com/try/download/compass). [Here](https://docs.mongodb.com/compass/current/import-export/) is a quickguide on how to import/export databases in Mongo using Mongo Compass.
+
+
 
 ## Dependencies used
 
