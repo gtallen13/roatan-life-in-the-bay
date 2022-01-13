@@ -15,7 +15,6 @@ import SlideImage from '../../../components/Slideshow/SlideImage'
 const Details = ({tour}) => {
     const originPoint = tour.route[0];
     const destinationPoint = tour.route[1];
-    console.log(tour);
     return (
         <div className="page-background">
             <Head>
@@ -69,8 +68,18 @@ const Details = ({tour}) => {
 }
 
 export async function getStaticPaths(){
+    const {db} = await connectToDatabase();    
+    
+    const data = await db
+    .collection("tours")
+    .find()
+    .toArray();
+    
+    const paths = data.map(tour=>{
+        return {params: {id:tour._id.toString()}}
+    })
     return{
-        paths:[],
+        paths,
         fallback:false
     }
 }
@@ -82,21 +91,11 @@ export async function getStaticProps({params}){
     .collection("tours")
     .findOne({
         _id: ObjectId(params.id)  
-    },{
-        projection:{
-            name:1,
-            description:1,
-            price:1,
-            bring_items:1,
-            route:1,
-            images:1
-        }
     })
     return{
         props:{
             tour:JSON.parse(JSON.stringify(data))
         },
-        revalidate:1,
     };
 }
 

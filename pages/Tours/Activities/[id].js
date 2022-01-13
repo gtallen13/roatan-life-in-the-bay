@@ -77,8 +77,18 @@ const Details = ({activity}) => {
     );
 }
 export async function getStaticPaths(){
+    const {db} = await connectToDatabase();    
+    
+    const data = await db
+    .collection("activities")
+    .find()
+    .toArray();
+    
+    const paths = data.map(activity=>{
+        return {params: {id:activity._id.toString()}}
+    })
     return{
-        paths:[],
+        paths,
         fallback:false
     }
 }
@@ -90,21 +100,11 @@ export async function getStaticProps({params}){
     .collection("activities")
     .findOne({
         _id: ObjectId(params.id)  
-    },{
-        projection:{
-            name:1,
-            description:1,
-            prices:1,
-            bring_items:1,
-            route:1,
-            images:1
-        }
     })
     return{
         props:{
             activity:JSON.parse(JSON.stringify(data))
-        },
-        revalidate:1,
+        }
     };
 }
 
