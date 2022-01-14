@@ -160,24 +160,14 @@ nav input {
 }
 @media all and (max-width: 480px) {
   nav {
-    padding: 0;
-    position: relative;
-  }
-  nav ul {
-    padding: 0;
+    overflow-x: hidden;
+    padding: 25px 10px;
   }
   nav .logo h4 {
     font-size: 25px;
-    padding: 20px;
   }
   .icon {
     top: 10px;
-  }
-  .show {
-    padding-right: 0;
-  }
-  [id^="btn"]:checked nav {
-    height: fit-content;
   }
 }
 /* ----------------- */
@@ -255,10 +245,7 @@ footer span {
   font-size: 20px;
   padding-left: 30px;
 }
-@media all and (min-width: 480px) {
-  .slide-container {
-    width: 50%;
-  }
+@media all and (max-width: 480px) {
   .slide-info span {
     font-size: 15px;
   }
