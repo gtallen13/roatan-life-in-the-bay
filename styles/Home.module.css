@@ -49,3 +49,16 @@
     font-size: 6em;
   }
 }
+@media all and (max-width: 480px) {
+  .bannerContainer {
+    height: 50vh;
+    width: 100%;
+  }
+  .bannerText h1 {
+    font-size: 4.5em;
+  }
+  .bannerText i {
+    top: 60px;
+    font-size: 0.5em;
+  }
+}

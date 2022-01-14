@@ -91,6 +91,7 @@ nav ul ul li a {
 nav input {
   display: none;
 }
+
 @media all and (max-width: 968px) {
   /* body {
     overflow-x: hidden;
@@ -155,6 +156,28 @@ nav input {
   }
   [id^="btn"]:checked + ul {
     display: block;
+  }
+}
+@media all and (max-width: 480px) {
+  nav {
+    padding: 0;
+    position: relative;
+  }
+  nav ul {
+    padding: 0;
+  }
+  nav .logo h4 {
+    font-size: 25px;
+    padding: 20px;
+  }
+  .icon {
+    top: 10px;
+  }
+  .show {
+    padding-right: 0;
+  }
+  [id^="btn"]:checked nav {
+    height: fit-content;
   }
 }
 /* ----------------- */
@@ -231,6 +254,14 @@ footer span {
 .slide-info span {
   font-size: 20px;
   padding-left: 30px;
+}
+@media all and (min-width: 480px) {
+  .slide-container {
+    width: 50%;
+  }
+  .slide-info span {
+    font-size: 15px;
+  }
 }
 .slide-image {
   border-radius: 50%;
