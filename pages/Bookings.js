@@ -12,7 +12,7 @@ const Bookings = ({tours}) => {
             </Head> 
             <h1 className="titles">Book Now</h1>
             <div className="center">
-                <div className="text-section" id="bookings">
+                <div className="text-section bookings">
                     <p>
                     If you would like to book more than one tour with us for your trip, please book on our 
                     tour page.

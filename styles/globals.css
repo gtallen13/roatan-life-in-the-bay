@@ -161,7 +161,7 @@ nav input {
 @media all and (max-width: 480px) {
   nav {
     overflow-x: hidden;
-    padding: 25px 10px;
+    padding: 25px 0;
   }
   nav .logo h4 {
     font-size: 25px;
@@ -297,6 +297,22 @@ footer span {
   text-align: center;
   font-family: "Dancing Script", cursive;
 }
+@media all and (max-width: 480px) {
+  .titles {
+    font-size: 65px;
+  }
+  .title-parallax {
+    bottom: 40%;
+    font-size: 50px;
+  }
+  .route-slider {
+    height: 50vh !important;
+  }
+  .text-section.tours,
+  .text-section.activity {
+    font-size: 18px;
+  }
+}
 .banner-container {
   height: 100vh;
   width: 100%;
@@ -310,11 +326,8 @@ footer span {
   font-size: 20px;
   width: 80%;
   height: max-content;
-  /* background-color: #f5f5f5; */
   margin: 20px auto;
   padding: 10px;
-  /* border-radius: 10px; */
-  /* box-shadow: 1px 2px 5px black; */
 }
 /* End Home Section */
 
@@ -339,6 +352,7 @@ a.btnBook {
 a.btnBook:hover {
   background-color: rgb(19, 18, 18);
 }
+
 .text-section.tours,
 .text-section.activity {
   display: flex;
@@ -354,7 +368,6 @@ span.price {
   font-style: italic;
   font-size: 18px;
   margin: 10px;
-  /* text-shadow: 0.5px 0.5px 1px black; */
 }
 .route-container {
   margin: 20px;
@@ -394,8 +407,21 @@ span.price {
     display: none;
   }
 }
-div#bookings {
+@media all and (max-width: 480px) {
+  a.btnBook {
+    width: 50%;
+  }
+}
+.bookings {
   width: 70%;
+}
+@media all and (max-width: 480px) {
+  .bookings {
+    width: 90%;
+  }
+  .text-section {
+    width: 90%;
+  }
 }
 
 .text-section.covid {
@@ -426,6 +452,11 @@ div#bookings {
 }
 .text-section.about-us {
   width: 60%;
+}
+@media all and (max-width: 480px) {
+  .logo-about-img {
+    visibility: hidden;
+  }
 }
 /* align logo to right in about us */
 .swiper {
@@ -497,6 +528,15 @@ span.swiper-pagination-bullet {
     font-size: 60px;
   }
 }
+@media all and (max-width: 480px) {
+  .covid-swiper .swiper-slide .text {
+    font-size: 18px;
+  }
+  .covid-swiper .swiper-slide .titles {
+    font-size: 55px;
+  }
+}
+
 .loader-container {
   height: 100vh;
   position: relative;
@@ -526,4 +566,13 @@ span.swiper-pagination-bullet {
   padding: 15px;
   border-radius: 10px;
   font-family: "Zen Old Mincho", serif;
+}
+@media all and (max-width: 480px) {
+  .loader-container h3 {
+    font-size: 45px;
+    text-align: center;
+  }
+  .loader-container {
+    height: 80vh;
+  }
 }

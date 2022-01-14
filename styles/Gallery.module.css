@@ -19,3 +19,8 @@
   opacity: 1;
   transform: scale(1.15);
 }
+@media all and (max-width: 480px) {
+  .galleryItem {
+    height: 40vh;
+  }
+}

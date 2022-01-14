@@ -115,3 +115,20 @@
     font-size: 35px;
   }
 }
+@media all and (max-width: 480px) {
+  .galleryWrapper {
+    height: 80vh;
+    justify-content: space-evenly;
+  }
+  .galleryTitle {
+    top: 10%;
+    padding: 40px;
+  }
+  .slideWrapper {
+    justify-content: space-evenly;
+    height: fit-content !important;
+  }
+  .slideCards {
+    width: 90%;
+  }
+}

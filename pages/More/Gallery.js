@@ -1,6 +1,7 @@
 import { connectToDatabase } from "../../utils/mongodb";
 import styles from '../../styles/Gallery.module.css';
 import Image from "next/image";
+import React,{useState} from 'react';
 const Gallery = ({images}) => {
     return (
         <div className="text-section gallery">
@@ -8,7 +9,12 @@ const Gallery = ({images}) => {
             <div className={styles.galleryContainer}>
                 {images.map((image,key)=>(
                     <div className={styles.galleryItem} key={key}>
-                        <Image className={styles.galleryImg} src={image.imgURL} layout="fill"/>
+                        <Image className={styles.galleryImg} 
+                        src={image.imgURL} 
+                        layout="fill"
+                        alt={`gallery image ${key}`} 
+                        placeholder='blur'
+                        blurDataURL={image.imgURL}/>
                     </div>
                 ))}
             </div>

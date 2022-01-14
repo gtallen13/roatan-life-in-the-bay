@@ -55,6 +55,11 @@
 .frmItems label {
   font-size: 18px;
 }
+@media all and (max-width: 480px) {
+  .frmItems label {
+    font-size: 15px;
+  }
+}
 .btnConfirm {
   padding: 10px;
   font-size: 15px;
@@ -72,12 +77,6 @@
 }
 .btnConfirm:hover {
   opacity: 1;
-}
-a.btnBuild {
-  font-family: "Dancing Script", cursive;
-  font-size: 20px;
-  padding: 0;
-  background-color: none !important;
 }
 .checkboxContainer input {
   width: fit-content !important;
@@ -133,5 +132,13 @@ a.btnBuild {
   }
   .txtArea input {
     width: 90%;
+  }
+}
+@media all and (max-width: 480px) {
+  .btnConfirm {
+    width: 70%;
+  }
+  .txtArea label {
+    font-size: 15px;
   }
 }
