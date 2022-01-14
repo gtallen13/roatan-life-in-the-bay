@@ -257,9 +257,7 @@ footer span {
   display: flex;
   flex-direction: column;
 }
-.route-slider-conntainer {
-  position: relative;
-}
+
 @media all and (max-width: 968px) {
   body {
     overflow-x: hidden;
@@ -304,8 +302,12 @@ footer span {
   .titles {
     font-size: 65px;
   }
+  div {
+    position: relative;
+  }
   .title-parallax {
     font-size: 50px;
+    bottom: 10px;
   }
   .route-slider {
     height: 50vh !important;
