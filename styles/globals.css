@@ -202,7 +202,7 @@ footer span {
 .title-parallax {
   position: absolute;
   z-index: 100;
-  bottom: -15%;
+  bottom: 0;
   color: whitesmoke;
   width: 100%;
   text-align: center;
@@ -257,6 +257,9 @@ footer span {
   display: flex;
   flex-direction: column;
 }
+.route-slider-conntainer {
+  position: relative;
+}
 @media all and (max-width: 968px) {
   body {
     overflow-x: hidden;
@@ -302,7 +305,6 @@ footer span {
     font-size: 65px;
   }
   .title-parallax {
-    bottom: 40%;
     font-size: 50px;
   }
   .route-slider {

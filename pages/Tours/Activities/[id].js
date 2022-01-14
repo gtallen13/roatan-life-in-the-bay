@@ -19,8 +19,7 @@ const Details = ({activity}) => {
                 <title>Tour the Island | Roatan Life in the Bay</title>
                 <meta name="keywords" content="tour,island,roatan,tours,bay islands"></meta>
             </Head> 
-            <h1 className="title-parallax">{activity.name}</h1>
-            <div>
+            <div className="route-slider-conntainer">
                 <h1 className="title-parallax">{activity.name}</h1>
                 <Swiper 
                 className="banner-container"
