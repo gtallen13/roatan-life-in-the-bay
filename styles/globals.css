@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
+
+
 body,
 html {
   padding: 0;
@@ -13,8 +16,21 @@ html {
   align-items: center;
 }
 .page-background {
-  /* background-color: #115c8a; */
-  background-color: whitesmoke;
+  background: linear-gradient(300deg,#d8c6ac,#f5f5f5);
+  background-size: 180% 180%;
+  animation: background-animation 18s ease infinite;
+}
+
+@keyframes background-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 /* Menu */
 nav {
