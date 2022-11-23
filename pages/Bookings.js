@@ -1,4 +1,4 @@
-import { connectToDatabase } from "../utils/mongodb";
+import { connectToDatabase } from "../utils/mongodb"; 
 import styles from '../styles/Bookings.module.css'
 import Head from 'next/head';
 import Link from 'next/link'

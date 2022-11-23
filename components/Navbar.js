@@ -18,18 +18,18 @@ const Navbar = () => {
                 </label>
                 <input id='btn-Menu' type="checkbox"/>
                 <ul>
-                    <li><Link href="/"><a>Home</a></Link></li>
-                    <li><Link href="/Tours/"><a>Tours</a></Link></li>
-                    <li><Link href="/Bookings"><a>Book Now</a></Link></li>
+                    <li><Link href="/">Home</Link></li>
+                    <li><Link href="/Tours/">Tours</Link></li>
+                    <li><Link href="/Bookings">Book Now</Link></li>
                     <li>
                         <label htmlFor="btn-More" className='show'>More</label>
-                        <Link href="#" ><a>More</a></Link>
+                        <Link href="#" >More</Link>
                         <input type="checkbox" id="btn-More"/>
                         <ul>
-                            <li><Link href="/More/Covid"><a>COVID-19</a></Link></li>
-                            <li><Link href="/More/About"><a>About US</a></Link></li>
-                            <li><Link href="/More/Gallery"><a>Gallery</a></Link></li>
-                            <li><Link href="/More/Contact"><a>Contact</a></Link></li>
+                            <li><Link href="/More/Covid">COVID-19</Link></li>
+                            <li><Link href="/More/About">About US</Link></li>
+                            <li><Link href="/More/Gallery">Gallery</Link></li>
+                            <li><Link href="/More/Contact">Contact</Link></li>
                         </ul>
                     </li>  
                 </ul>
