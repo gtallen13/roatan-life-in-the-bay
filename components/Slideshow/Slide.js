@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/legacy/image";
 const Slide = ({name, location, image, text}) => {
     return (
         <div className="slide-container">

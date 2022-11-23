@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import styles from '../../styles/Tours.module.css';
 import React,{useState} from 'react';
 const ImageLoad = ({src,alt}) => {

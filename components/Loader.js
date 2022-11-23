@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Head from "next/head"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';

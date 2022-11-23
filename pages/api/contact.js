@@ -2,12 +2,13 @@
 export default function (req,res){
     const {email, fullName, description} = req.body;
     let nodemailer = require('nodemailer')
+    console.log(description);
     const transporter = nodemailer.createTransport({
         port:465,
         host:"smtp.gmail.com",
         auth:{
-            user:process.env.USER_EMAIL,
-            pass:process.env.USER_PASSWORD
+            user:process.env.EMAIL_USER,
+            pass:process.env.EMAIL_PASSWORD
         },
         secure:true
     });
@@ -17,7 +18,6 @@ export default function (req,res){
         to: email,
         subject: `Questions from  ${fullName}`,
         text: description,
-        html: <div>{description}</div>
     }
     transporter.sendMail(mailData,(err,info)=>{
         if (err){

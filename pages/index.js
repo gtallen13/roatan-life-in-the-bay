@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import styles from '../styles/Home.module.css';
 import stylesConstants from '../styles/Constants.module.css';
 import Slide from '../components/Slideshow/Slide'
@@ -20,7 +20,7 @@ export default function Home() {
       </Head> 
       {/* Banner Section */}
       <div className={styles.bannerContainer}>  
-        <Image className={styles.bannerImage} layout='fill' src="/banner3.jpg" placeholder='blur' blurDataURL='/banner3.jpg'/>
+        <Image className={styles.bannerImage} layout='fill' src="/banner3.jpg" placeholder='blur' blurDataURL='/banner3.jpg' alt='banner image'/>
         <div className={styles.bannerText}>
             <h1 className={stylesConstants.textPrimary}>ROATAN
                 <i className={stylesConstants.textSecondary}>Life in the Bay</i>

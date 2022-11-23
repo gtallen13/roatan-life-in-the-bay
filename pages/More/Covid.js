@@ -4,7 +4,7 @@ import "swiper/css/pagination"
 import "swiper/css/navigation"
 import Link from 'next/link';
 import Head from 'next/head';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import SwiperCore, {
     Parallax,Pagination,Navigation
   } from 'swiper';

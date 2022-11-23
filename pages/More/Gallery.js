@@ -1,6 +1,6 @@
 import { connectToDatabase } from "../../utils/mongodb";
 import styles from '../../styles/Gallery.module.css';
-import Image from "next/image";
+import Image from "next/legacy/image";
 import React,{useState} from 'react';
 const Gallery = ({images}) => {
     return (
