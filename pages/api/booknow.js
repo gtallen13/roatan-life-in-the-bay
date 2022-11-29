@@ -5,11 +5,12 @@ export default function (req,res){
         email,
         date,
         shipResortName,
-        arrTour, 
+        arrTours, 
         bTransport,
         guestMore5yrs,
         guestLess5yrs
     } = req.body;
+    
     let nodemailer = require('nodemailer')
     const transporter = nodemailer.createTransport({
         port:465,
@@ -25,13 +26,13 @@ export default function (req,res){
     \nEmail: ${email},
     \nDate for the reservation: ${date}
     \nShip/Resort's name: ${shipResortName}
-    \nTour(s) reserved: ${arrTour}
+    \nTour(s) reserved: ${arrTours.join(', ')}
     \nTransportaion needed: ${bTransport?'Yes':'No'}
     \nGuests 5 years and older: ${guestMore5yrs}
     \nGuests under 5 years of age: ${guestLess5yrs}`
     const mailData = {
-        from: "gtallenpadi13@gmail.com",
-        to: email,
+        from: email,
+        to: "gtallenpadi13@gmail.com",
         subject: `${fullName}'s booking`,
         text: mailBody,
     }

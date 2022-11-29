@@ -14,19 +14,54 @@ const Bookings = ({tours}) => {
     const [transportationNeeded, setTransportationNeeded] = useState();
     const [nGuestsU5yrs, setNGuestsU5yrs] = useState(0);
     const [nGuestsO5yrs, setNGuestsO5yrs] = useState(0);
+    const [bookingMade, setBookingMade] = useState(false);
     const addTour = (newTour)=>{
-        setArrTours(current=>[...arrTours,newTour])
+        setArrTours([...arrTours,newTour])
     }
 
     const removeTour = (tourName)=>{
         setArrTours(current=>
             current.filter(item=>{
                 return item !==tourName
-            }))
+        }))
     }
-    useEffect(()=>{
-        console.log(arrTours);
-    },[arrTours])
+    const data ={
+        fullName,
+        email,
+        tourDate,
+        shipResortName,
+        arrTours,
+        transportationNeeded,
+        nGuestsU5yrs,
+        nGuestsO5yrs,
+    }
+    const handleSubmit=(e)=>{
+        e.preventDefault()
+        fetch('/api/booknow',{
+            method:'POST',
+            headers:{
+                'Accept': 'application/json, text/plain, */*',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        }).then((res)=>{
+            if(res.status===200){
+                console.log('====================================');
+                console.log("Sent sucessfully");
+                setBookingMade(true)
+                console.log('====================================');
+            }
+            setFullName('');
+            setEmail('');
+            setTourDate('');
+            setShipResortName('');
+            setArrTours('');
+            setTransportationNeeded('');
+            setNGuestsU5yrs('');
+            setNGuestsO5yrs('');
+        })
+    }
+
     return (
         <div className="page-background">
             <Head>
@@ -126,27 +161,52 @@ const Bookings = ({tours}) => {
                             </div>
                             <div className={styles.frmItems}>
                             <label htmlFor="select-transport">Need Transportation*</label>
-                                <select name="select-transport" id="select-transport" required>
-                                    <option value="yes">Yes, please!</option>
-                                    <option value="no">No, thank you</option>
+                                <select 
+                                name="select-transport" 
+                                id="select-transport" 
+                                required
+                                onChange={(e)=>{setTransportationNeeded(e.target.value)}}
+                                value={transportationNeeded}
+                                >
+                                    <option value="N/A">Select an option</option>
+                                    <option value={true}>Yes, please!</option>
+                                    <option value={false}>No, thank you</option>
                                 </select>
                             </div>
                         </div>
                         <div className={styles.frmRow}>
                             <div className={styles.frmItems}>
-                                <label htmlFor="txt5>">Number of guests 5yrs and older*</label>
-                                <input type="number" id="txt5>" name="txt5>" required/>
+                                <label htmlFor="txt5">Number of guests 5yrs and older*</label>
+                                <input 
+                                type="number" 
+                                id="txt5" 
+                                name="txt5" 
+                                required
+                                value={nGuestsO5yrs}
+                                onChange={(e)=>{setNGuestsO5yrs(e.target.value)}}
+                                />
                             </div>
                             <div className={styles.frmItems}>
                                 <label htmlFor="txt4<">Number of guests 4yrs and under*</label>
-                                <input type="number" id="txt4<" name="txt4<" required/>
+                                <input 
+                                type="number" 
+                                id="txt4" 
+                                name="txt4" 
+                                required
+                                onChange={(e)=>{setNGuestsU5yrs(e.target.value)}}
+                                value={nGuestsU5yrs}
+                                />
                             </div>
                         </div>
-                        <button name="btnConfirm" id="btnConfirm" className={styles.btnConfirm}>Confirm</button>
+                        <button 
+                        name="btnConfirm" 
+                        id="btnConfirm" 
+                        className={styles.btnConfirm}
+                        onClick={(e)=>{handleSubmit(e)}}
+                        >Confirm</button>
                     </form>
-                    {/* {arrTours.map((item,key)=>(
-                        <span key={key}>{item}</span>
-                    ))} */}
+                    {bookingMade?
+                    <span>Your reservation has been made!</span>:null}
                 </div>
             </div>
         </div>
