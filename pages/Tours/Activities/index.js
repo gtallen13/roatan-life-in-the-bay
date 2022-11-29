@@ -39,10 +39,10 @@ const waterActivities = ({activities}) => {
                                 )}
                             </Swiper>
                         </div>
-                        <Link href={`/Tours/Activities/${activity.id}`}><h4>{activity.name}</h4></Link>
+                        <Link href={`/Tours/Activities/${activity.id}`} legacyBehavior><h4>{activity.name}</h4></Link>
                         <p>{descriptionLimiter(activity.description,150)}
                             <Link href={`/Tours/Activities/${activity.id}`} >
-                                <a>...Read More</a>
+                                ...Read More
                             </Link>
                         </p>
                     </div>

@@ -52,7 +52,7 @@ const Covid = () => {
                             <div className="titles" data-swiper-parallax="-300">Contact Us</div>
                             <div className="text" data-swiper-parallax="-100">
                                 <p>
-                                    As always, if you have any inquires about your upcoming trip, us, or our services, please <Link href="/More/Contact"><a>contact us.</a></Link> We'd love to help you plan unforgettable Life in the Bay memories!
+                                    As always, if you have any inquires about your upcoming trip, us, or our services, please <Link href="/More/Contact">contact us.</Link> We'd love to help you plan unforgettable Life in the Bay memories!
                                 </p>
                             </div>
                         </SwiperSlide>

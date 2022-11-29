@@ -38,10 +38,10 @@ const tourIsland = ({tours}) => {
                                 )}
                             </Swiper>
                         </div>
-                        <Link href={`/Tours/Island/${tour.id}`}><h4>{tour.name}</h4></Link>
+                        <Link href={`/Tours/Island/${tour.id}`} legacyBehavior><h4>{tour.name}</h4></Link>
                         <p>{descriptionLimiter(tour.description,150)}...
                             <Link href={`/Tours/Island/${tour.id}`}>
-                                <a>Read More</a>
+                                Read More
                             </Link>
                         </p>
                     </div>

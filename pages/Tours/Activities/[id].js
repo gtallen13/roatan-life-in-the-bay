@@ -66,7 +66,7 @@ const Details = ({activity}) => {
                             ))}
                         </ul>
                         <div className="book-now-wrapper center">
-                            <Link href=""><a className="btnBook">Book Now</a></Link>
+                            <Link href="" className="btnBook">Book Now</Link>
                         </div>
                     </div>
                 </section>

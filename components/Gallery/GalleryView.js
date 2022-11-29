@@ -6,7 +6,7 @@ const GalleryView = ({title, pageName,images}) => {
     
     return (
         <div className={styles.galleryContainer}>
-            <Link href={`${pageName}`}><h2 className={styles.galleryTitle}>{title}</h2></Link>
+            <Link href={`${pageName}`} legacyBehavior><h2 className={styles.galleryTitle}>{title}</h2></Link>
             <div className={styles.galleryRow}>
                 <ImageLoad src={images[0]} alt="Gallery Image"/>
                 <ImageLoad src={images[1]} alt="Gallery Image"/>

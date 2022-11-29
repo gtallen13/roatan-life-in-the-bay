@@ -57,7 +57,7 @@ const Details = ({tour}) => {
                         </ul>
                         <div className="book-now-wrapper">
                             <span className="price">Price: ${tour.price}/person</span>
-                            <Link href=""><a className="btnBook">Book Now</a></Link>
+                            <Link href="" className="btnBook">Book Now</Link>
                         </div>
                     </div>
                 </section>

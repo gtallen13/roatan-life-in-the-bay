@@ -3,7 +3,30 @@ import styles from '../styles/Bookings.module.css'
 import Head from 'next/head';
 import Link from 'next/link'
 import Checkbox from "../components/Checkbox";
+import { useEffect, useState } from "react";
 const Bookings = ({tours}) => {
+
+    const [fullName, setFullName] = useState('');
+    const [email, setEmail] = useState('');
+    const [tourDate, setTourDate] = useState('');
+    const [shipResortName, setShipResortName] = useState('');
+    const [arrTours, setArrTours] = useState([]);
+    const [transportationNeeded, setTransportationNeeded] = useState();
+    const [nGuestsU5yrs, setNGuestsU5yrs] = useState(0);
+    const [nGuestsO5yrs, setNGuestsO5yrs] = useState(0);
+    const addTour = (newTour)=>{
+        setArrTours(current=>[...arrTours,newTour])
+    }
+
+    const removeTour = (tourName)=>{
+        setArrTours(current=>
+            current.filter(item=>{
+                return item !==tourName
+            }))
+    }
+    useEffect(()=>{
+        console.log(arrTours);
+    },[arrTours])
     return (
         <div className="page-background">
             <Head>
@@ -21,34 +44,85 @@ const Bookings = ({tours}) => {
                         <div className={styles.frmRow}>
                             <div className={styles.frmItems}>
                                 <label htmlFor="txtName">Full Name*</label>
-                                <input required type="text" id="txtName" name="txtName" placeholder="Luke Johnson"/>
+                                <input required 
+                                type="text" 
+                                id="txtName" 
+                                name="txtName" 
+                                placeholder="Luke Johnson" 
+                                onChange={(e)=>{setFullName(e.target.value)}}
+                                value={fullName}
+                                />
                             </div>
                             <div className={styles.frmItems}>
                                 <label htmlFor="txtEmail">Email*</label>
-                                <input required type="email" id="txtEmail" name="txtEmail" placeholder="ljohnson17@baylife.com"/>
-
+                                <input required 
+                                type="email" 
+                                id="txtEmail" 
+                                name="txtEmail" 
+                                placeholder="ljohnson17@baylife.com"
+                                value={email}
+                                onChange={(e)=>{setEmail(e.target.value)}}
+                                />
                             </div>
                         </div>
                         <div className={styles.frmRow}>
                             <div className={styles.frmItems}>
                                 <label htmlFor="txtDate">Date*</label>
-                                <input required type="datetime-local" id="txtDate" name="txtDate"/>
+                                <input required 
+                                type="datetime-local" 
+                                id="txtDate" 
+                                name="txtDate"
+                                value={tourDate}
+                                onChange={(e)=>{setTourDate(e.target.value)}}
+                                />
                             </div>
                             <div className={styles.frmItems}>
                                 <label htmlFor="txtShipResort">Ship/Resort Name*</label>
-                                <input required type="text" id="txtShipResort" name="txtShipResort"/>
+                                <input required 
+                                type="text" 
+                                id="txtShipResort" 
+                                name="txtShipResort"
+                                value={shipResortName}
+                                onChange={(e)=>{setShipResortName(e.target.value)}}
+                                />
                             </div>
                         </div>
                         <div className={styles.frmRow}>
                             <div className={styles.frmItems}>
                                 <p>Tour*</p>
                                 {tours.map((tour,key)=>(
-                                    <Checkbox id={tour.id} text={tour.info} key={key}/>
+                                    <Checkbox 
+                                    id={tour.id} 
+                                    text={tour.info} 
+                                    key={key}
+                                    addTour={addTour}
+                                    removeTour={removeTour}
+                                    />
                                 ))}
-                                <Checkbox id="1" text="Fishing Charter 1/2 day $300-350"/>
-                                <Checkbox id="2" text="Fishing Charter Full day $500-600"/>
-                                <Checkbox id="3" text="Kayaking 1/2 $60/person"/>
-                                <Checkbox id="4" text="Beach Day $30/person"/>
+                                <Checkbox 
+                                id="1" 
+                                text="Fishing Charter 1/2 day $300-350"
+                                addTour={addTour}
+                                removeTour={removeTour}
+                                />
+                                <Checkbox 
+                                id="2" 
+                                text="Fishing Charter Full day $500-600"
+                                addTour={addTour}
+                                removeTour={removeTour}
+                                />
+                                <Checkbox 
+                                id="3" 
+                                text="Kayak/ing 1/2 $60/person"
+                                addTour={addTour}
+                                removeTour={removeTour}
+                                />
+                                <Checkbox 
+                                id="4" 
+                                text="Beach Day $30/person"
+                                addTour={addTour}
+                                removeTour={removeTour}
+                                />
                             </div>
                             <div className={styles.frmItems}>
                             <label htmlFor="select-transport">Need Transportation*</label>
@@ -70,6 +144,9 @@ const Bookings = ({tours}) => {
                         </div>
                         <button name="btnConfirm" id="btnConfirm" className={styles.btnConfirm}>Confirm</button>
                     </form>
+                    {/* {arrTours.map((item,key)=>(
+                        <span key={key}>{item}</span>
+                    ))} */}
                 </div>
             </div>
         </div>
