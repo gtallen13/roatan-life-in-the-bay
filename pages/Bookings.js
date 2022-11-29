@@ -2,7 +2,8 @@ import { connectToDatabase } from "../utils/mongodb";
 import styles from '../styles/Bookings.module.css'
 import Head from 'next/head';
 import Link from 'next/link'
-import Checkbox from "../components/Checkbox";
+import Router, { useRouter } from "next/router";
+import {Textbox, DateSelector, ComboBox, Checkbox} from "../components/Forms";
 import { useEffect, useState } from "react";
 const Bookings = ({tours}) => {
 
@@ -15,10 +16,14 @@ const Bookings = ({tours}) => {
     const [nGuestsU5yrs, setNGuestsU5yrs] = useState(0);
     const [nGuestsO5yrs, setNGuestsO5yrs] = useState(0);
     const [bookingMade, setBookingMade] = useState(false);
+    const router = useRouter();
     const addTour = (newTour)=>{
         setArrTours([...arrTours,newTour])
     }
-
+    const optionsTranportation=[
+        {label:"Yes, we need transportation!",value:true},
+        {label:"No, thank you", value:false}
+    ]
     const removeTour = (tourName)=>{
         setArrTours(current=>
             current.filter(item=>{
@@ -55,10 +60,11 @@ const Bookings = ({tours}) => {
             setEmail('');
             setTourDate('');
             setShipResortName('');
-            setArrTours('');
+            setArrTours([]);
             setTransportationNeeded('');
             setNGuestsU5yrs('');
             setNGuestsO5yrs('');
+            router.reload()
         })
     }
 
@@ -77,50 +83,31 @@ const Bookings = ({tours}) => {
                     </p>
                     <form className={styles.bookingFrm}>
                         <div className={styles.frmRow}>
-                            <div className={styles.frmItems}>
-                                <label htmlFor="txtName">Full Name*</label>
-                                <input required 
-                                type="text" 
-                                id="txtName" 
-                                name="txtName" 
-                                placeholder="Luke Johnson" 
-                                onChange={(e)=>{setFullName(e.target.value)}}
-                                value={fullName}
-                                />
-                            </div>
-                            <div className={styles.frmItems}>
-                                <label htmlFor="txtEmail">Email*</label>
-                                <input required 
-                                type="email" 
-                                id="txtEmail" 
-                                name="txtEmail" 
-                                placeholder="ljohnson17@baylife.com"
-                                value={email}
-                                onChange={(e)=>{setEmail(e.target.value)}}
-                                />
-                            </div>
+                            <Textbox
+                            labelText="Full Name*"
+                            placeholder="Luke Johnson"
+                            value={fullName}
+                            setValue={setFullName}
+                            />
+                            <Textbox
+                            labelText="Email*"
+                            placeholder="ljohnson17@baylife.com"
+                            setValue={setEmail}
+                            value={email}
+                            />
                         </div>
                         <div className={styles.frmRow}>
-                            <div className={styles.frmItems}>
-                                <label htmlFor="txtDate">Date*</label>
-                                <input required 
-                                type="datetime-local" 
-                                id="txtDate" 
-                                name="txtDate"
-                                value={tourDate}
-                                onChange={(e)=>{setTourDate(e.target.value)}}
-                                />
-                            </div>
-                            <div className={styles.frmItems}>
-                                <label htmlFor="txtShipResort">Ship/Resort Name*</label>
-                                <input required 
-                                type="text" 
-                                id="txtShipResort" 
-                                name="txtShipResort"
-                                value={shipResortName}
-                                onChange={(e)=>{setShipResortName(e.target.value)}}
-                                />
-                            </div>
+                            <DateSelector 
+                            labelText="Date*"
+                            value={tourDate}
+                            setValue={setTourDate}
+                            />
+                            <Textbox
+                            labelText="Ship/Resort Name*"
+                            placeholder="Henry Morgan"
+                            value={shipResortName}
+                            setValue={setShipResortName}
+                            />
                         </div>
                         <div className={styles.frmRow}>
                             <div className={styles.frmItems}>
@@ -159,44 +146,25 @@ const Bookings = ({tours}) => {
                                 removeTour={removeTour}
                                 />
                             </div>
-                            <div className={styles.frmItems}>
-                            <label htmlFor="select-transport">Need Transportation*</label>
-                                <select 
-                                name="select-transport" 
-                                id="select-transport" 
-                                required
-                                onChange={(e)=>{setTransportationNeeded(e.target.value)}}
-                                value={transportationNeeded}
-                                >
-                                    <option value="N/A">Select an option</option>
-                                    <option value={true}>Yes, please!</option>
-                                    <option value={false}>No, thank you</option>
-                                </select>
-                            </div>
+                            <ComboBox
+                            labelText="Need transportation?"
+                            options={optionsTranportation}
+                            value={transportationNeeded}
+                            setValue={setTransportationNeeded}
+                            />
                         </div>
                         <div className={styles.frmRow}>
-                            <div className={styles.frmItems}>
-                                <label htmlFor="txt5">Number of guests 5yrs and older*</label>
-                                <input 
-                                type="number" 
-                                id="txt5" 
-                                name="txt5" 
-                                required
-                                value={nGuestsO5yrs}
-                                onChange={(e)=>{setNGuestsO5yrs(e.target.value)}}
-                                />
-                            </div>
-                            <div className={styles.frmItems}>
-                                <label htmlFor="txt4<">Number of guests 4yrs and under*</label>
-                                <input 
-                                type="number" 
-                                id="txt4" 
-                                name="txt4" 
-                                required
-                                onChange={(e)=>{setNGuestsU5yrs(e.target.value)}}
-                                value={nGuestsU5yrs}
-                                />
-                            </div>
+                            <Textbox
+                            labelText="Number of guests 5yrs and older*"
+                            value={nGuestsO5yrs}
+                            setValue={setNGuestsO5yrs}
+                            />
+                            <Textbox
+                            labelText="Number of guests 4yrs and under*"
+
+                            value={nGuestsU5yrs}
+                            setValue={setNGuestsU5yrs}
+                            />
                         </div>
                         <button 
                         name="btnConfirm" 
